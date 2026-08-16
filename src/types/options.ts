@@ -14,8 +14,12 @@ export interface BaseListOptions {
 	 * `limit`. Ignored if `startIndex` is also provided.
 	 */
 	page?: number;
-	/** Alias for Blogger's `max-results`. @default 25 */
-	limit?: number;
+	/**
+	 * Alias for Blogger's `max-results`. @default 25
+	 * Pass `null` to omit `max-results` from the request entirely (Blogger
+	 * then applies its own default page size).
+	 */
+	limit?: number | null;
 	/** Raw 1-based start index, takes precedence over `page`. */
 	startIndex?: number;
 	/** Sort field. */

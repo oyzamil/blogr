@@ -4,8 +4,24 @@ export interface Author {
 	name: string | null;
 	/** Profile URL of the author, or `null` if unavailable. */
 	url: string | null;
+	/**
+	 * Numeric Blogger profile id, parsed out of `url` (e.g. the trailing
+	 * digits of `.../profile/12345678901234567890`), or `null` if `url`
+	 * isn't a recognizable profile link. More stable than matching on
+	 * `name`, which can change or collide between authors.
+	 */
+	id: string | null;
+	/**
+	 * Email on file, or `null`. Blogger's public feed almost always masks
+	 * this as `noreply@blogger.com` for privacy — rarely a real address.
+	 */
+	email: string | null;
 	/** Avatar/profile image URL of the author, or `null` if unavailable. */
 	image: string | null;
+	/** Avatar width in px, if the feed reported one, else `null`. */
+	imageWidth: number | null;
+	/** Avatar height in px, if the feed reported one, else `null`. */
+	imageHeight: number | null;
 }
 
 /** A single `<link>` entry as reported by the feed. */

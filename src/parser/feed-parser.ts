@@ -1,16 +1,15 @@
-import type {
-	Author,
-	BlogInfo,
-	Comment,
-	Extended,
-	Geo,
-	Link,
-	ParsedFeed,
-	Post,
-	PostCommentInfo,
-} from "../types/feed";
-
 import { getNested, isArray, isObject, isString } from "../core/utils";
+import {
+	type Author,
+	type BlogInfo,
+	type Comment,
+	type Extended,
+	type Geo,
+	type Link,
+	type ParsedFeed,
+	type Post,
+	type PostCommentInfo,
+} from "../types/feed";
 
 function getLinks(linkArray: unknown): {
 	alternate: string | null;
@@ -109,30 +108,60 @@ function getPostComments(linkArray: unknown): PostCommentInfo {
 	return result;
 }
 
+function parseProfileId(uri: string | null): string | null {
+	if (uri === null) return null;
+	const match = uri.match(/\/profile\/(\d+)/);
+	return match ? (match[1] ?? null) : null;
+}
+
+function parseImageDimension(
+	entry: unknown,
+	key: "width" | "height",
+): number | null {
+	const raw = getNested(entry, "gd$image", key);
+	if (raw === null || raw === undefined) return null;
+	const num = Number(raw);
+	return Number.isFinite(num) ? num : null;
+}
+
 function getAuthors(authorArray: unknown): Author[] {
 	const authors: Author[] = [];
 	if (isArray(authorArray)) {
 		for (const author of authorArray) {
 			const name = getNested(author, "name", "$t");
 			const uri = getNested(author, "uri", "$t");
+			const email = getNested(author, "email", "$t");
 			const image = getNested(author, "gd$image", "src");
+			const url = isString(uri) ? uri : null;
 
 			authors.push({
 				name: isString(name) ? name : null,
-				url: isString(uri) ? uri : null,
+				url,
+				id: parseProfileId(url),
+				email: isString(email) ? email : null,
 				image:
 					isString(image) &&
 					image.trim().toLowerCase() !==
 						"https://img1.blogblog.com/img/b16-rounded.gif"
 						? image
 						: null,
+				imageWidth: parseImageDimension(author, "width"),
+				imageHeight: parseImageDimension(author, "height"),
 			});
 		}
 	}
 	return authors;
 }
 
-const EMPTY_AUTHOR: Author = { name: null, url: null, image: null };
+const EMPTY_AUTHOR: Author = {
+	name: null,
+	url: null,
+	id: null,
+	email: null,
+	image: null,
+	imageWidth: null,
+	imageHeight: null,
+};
 
 function getExtended(entry: unknown): Extended {
 	const result: Extended = { class: null, time: null, removed: false };

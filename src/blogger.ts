@@ -1,22 +1,9 @@
-import type { Cache } from "./core/cache";
-import type { BloggerEventMap, BloggerEventName } from "./core/events";
-import type { BlogStats } from "./modules/stats";
-import type { BlogInfo, Comment, Link, ParsedFeed, Post } from "./types/feed";
-import type {
-	CommentsListOptions,
-	LatestOptions,
-	Pager,
-	PagesListOptions,
-	PostsListOptions,
-	RandomOptions,
-	RequestOptions,
-	SearchOptions,
-} from "./types/options";
-
+import { type Cache } from "./core/cache";
 import { Client, type ClientOptions } from "./core/client";
+import { type BloggerEventMap, type BloggerEventName } from "./core/events";
 import { assertNonBlankString, isString } from "./core/utils";
 import { ArchiveModule } from "./modules/archive";
-import { AuthorsModule } from "./modules/authors";
+import { AuthorsModule, type AuthorWithPostCount } from "./modules/authors";
 import { CommentsModule } from "./modules/comments";
 import { FeedModule } from "./modules/feed";
 import { ImagesModule } from "./modules/images";
@@ -24,7 +11,7 @@ import { LabelsModule } from "./modules/labels";
 import { PagesModule } from "./modules/pages";
 import { PostsModule } from "./modules/posts";
 import { SearchModule } from "./modules/search";
-import { StatsModule } from "./modules/stats";
+import { type BlogStats, StatsModule } from "./modules/stats";
 import { UrlModule } from "./modules/url";
 import { parseFeed } from "./parser/feed-parser";
 import {
@@ -40,6 +27,23 @@ import {
 	thumbnail,
 } from "./parser/html";
 import { type BloggerPlugin, installPlugin } from "./plugins";
+import {
+	type BlogInfo,
+	type Comment,
+	type Link,
+	type ParsedFeed,
+	type Post,
+} from "./types/feed";
+import {
+	type CommentsListOptions,
+	type LatestOptions,
+	type Pager,
+	type PagesListOptions,
+	type PostsListOptions,
+	type RandomOptions,
+	type RequestOptions,
+	type SearchOptions,
+} from "./types/options";
 
 export type { ClientOptions as BloggerOptions };
 
@@ -118,11 +122,15 @@ export class Blogr {
 		return this.statsModule.get(requestOptions);
 	}
 
-	/** Distinct post authors, aggregated from a sample of recent posts. */
+	/**
+	 * Distinct post authors, each with their post count. By default scans
+	 * every post in the blog (no `max-results` sent, follows pagination
+	 * until exhausted); pass `sampleSize` to cap to one request instead.
+	 */
 	async authors(
 		options?: { sampleSize?: number },
 		requestOptions?: RequestOptions,
-	): Promise<BlogInfo["author"][]> {
+	): Promise<AuthorWithPostCount[]> {
 		return this.authorsModule.list(options, requestOptions);
 	}
 

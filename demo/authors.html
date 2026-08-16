@@ -40,6 +40,31 @@
 			font-size: 0.875rem;
 			font-weight: 500;
 		}
+
+		.author-card__count {
+			font-size: 0.75rem;
+			color: var(--muted-foreground, #6b7280);
+		}
+
+		.author-card__dates {
+			font-size: 0.7rem;
+			color: var(--muted-foreground, #6b7280);
+		}
+
+		.author-card__labels {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.25rem;
+			justify-content: center;
+		}
+
+		.author-card__label {
+			font-size: 0.65rem;
+			padding: 0.1rem 0.4rem;
+			border-radius: 999px;
+			background: var(--muted, #f1f5f9);
+			color: var(--muted-foreground, #6b7280);
+		}
 	</style>
 </head>
 
@@ -58,19 +83,21 @@
 				<span class="eyebrow">Content</span>
 				<h1>Authors</h1>
 				<p>Blogger's feed API has no dedicated authors endpoint — <code>blog.authors()</code> aggregates unique
-					authors seen across a sample of the most recent posts.</p>
+					authors across the blog's posts, along with each author's post count. By default it scans
+					every post (no <code>max-results</code> sent, follows pagination until exhausted); set
+					sampleSize below to cap it to one request instead.</p>
 			</div>
 
 			<div class="card">
 				<div class="card__head">
 					<h3>blog.authors(options)</h3>
-					<span class="endpoint">GET ./posts/summary?max-results={sampleSize}</span>
+					<span class="endpoint">GET ./posts/summary{?max-results=sampleSize}</span>
 				</div>
 				<div class="card__body">
 					<div class="controls">
 						<div class="field">
-							<label for="authors-sample-size">sampleSize</label>
-							<input type="number" id="authors-sample-size" value="150" min="1" max="1000" />
+							<label for="authors-sample-size">sampleSize (blank = scan all posts)</label>
+							<input type="number" id="authors-sample-size" placeholder="all" min="1" max="1000" />
 						</div>
 					</div>
 					<div class="actions-row">
