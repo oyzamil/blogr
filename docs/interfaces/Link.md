@@ -6,7 +6,7 @@
 
 # Interface: Link
 
-Defined in: [src/types/feed.ts:28](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L28)
+Defined in: [src/types/feed.ts:28](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L28)
 
 A single `<link>` entry as reported by the feed.
 
@@ -16,7 +16,7 @@ A single `<link>` entry as reported by the feed.
 
 > **href**: `string`
 
-Defined in: [src/types/feed.ts:30](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L30)
+Defined in: [src/types/feed.ts:30](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L30)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types/feed.ts:30](https://github.com/oyzamil/blogr/blob/a9e9999
 
 > **rel**: `string`
 
-Defined in: [src/types/feed.ts:29](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L29)
+Defined in: [src/types/feed.ts:29](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L29)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types/feed.ts:29](https://github.com/oyzamil/blogr/blob/a9e9999
 
 > **title**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:32](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L32)
+Defined in: [src/types/feed.ts:32](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L32)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/types/feed.ts:32](https://github.com/oyzamil/blogr/blob/a9e9999
 
 > **type**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:31](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L31)
+Defined in: [src/types/feed.ts:31](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L31)

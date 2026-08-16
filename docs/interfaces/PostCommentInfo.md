@@ -6,7 +6,7 @@
 
 # Interface: PostCommentInfo
 
-Defined in: [src/types/feed.ts:53](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L53)
+Defined in: [src/types/feed.ts:53](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L53)
 
 Metadata about comments attached to a post.
 
@@ -16,7 +16,7 @@ Metadata about comments attached to a post.
 
 > **feed**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:54](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L54)
+Defined in: [src/types/feed.ts:54](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L54)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types/feed.ts:54](https://github.com/oyzamil/blogr/blob/a9e9999
 
 > **number**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:55](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L55)
+Defined in: [src/types/feed.ts:55](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L55)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [src/types/feed.ts:55](https://github.com/oyzamil/blogr/blob/a9e9999
 
 > **title**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:56](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L56)
+Defined in: [src/types/feed.ts:56](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L56)

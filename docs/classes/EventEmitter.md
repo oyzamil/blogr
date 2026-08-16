@@ -6,7 +6,7 @@
 
 # Class: EventEmitter
 
-Defined in: [src/core/events.ts:18](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/events.ts#L18)
+Defined in: [src/core/events.ts:18](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/events.ts#L18)
 
 A minimal, dependency-free, typed event emitter.
 
@@ -26,7 +26,7 @@ A minimal, dependency-free, typed event emitter.
 
 > **emit**\<`K`\>(`event`, `payload`): `void`
 
-Defined in: [src/core/events.ts:47](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/events.ts#L47)
+Defined in: [src/core/events.ts:47](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/events.ts#L47)
 
 #### Type Parameters
 
@@ -54,7 +54,7 @@ Defined in: [src/core/events.ts:47](https://github.com/oyzamil/blogr/blob/a9e999
 
 > **off**\<`K`\>(`event`, `listener`): `this`
 
-Defined in: [src/core/events.ts:34](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/events.ts#L34)
+Defined in: [src/core/events.ts:34](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/events.ts#L34)
 
 #### Type Parameters
 
@@ -82,7 +82,7 @@ Defined in: [src/core/events.ts:34](https://github.com/oyzamil/blogr/blob/a9e999
 
 > **on**\<`K`\>(`event`, `listener`): `this`
 
-Defined in: [src/core/events.ts:24](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/events.ts#L24)
+Defined in: [src/core/events.ts:24](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/events.ts#L24)
 
 #### Type Parameters
 
@@ -110,7 +110,7 @@ Defined in: [src/core/events.ts:24](https://github.com/oyzamil/blogr/blob/a9e999
 
 > **once**\<`K`\>(`event`, `listener`): `this`
 
-Defined in: [src/core/events.ts:39](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/events.ts#L39)
+Defined in: [src/core/events.ts:39](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/events.ts#L39)
 
 #### Type Parameters
 

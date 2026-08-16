@@ -6,7 +6,7 @@
 
 # Interface: ExtractedLink
 
-Defined in: [src/parser/html.ts:139](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/parser/html.ts#L139)
+Defined in: [src/parser/html.ts:139](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/parser/html.ts#L139)
 
 A link extracted from post HTML content.
 
@@ -16,7 +16,7 @@ A link extracted from post HTML content.
 
 > **text**: `string`
 
-Defined in: [src/parser/html.ts:141](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/parser/html.ts#L141)
+Defined in: [src/parser/html.ts:141](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/parser/html.ts#L141)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: [src/parser/html.ts:141](https://github.com/oyzamil/blogr/blob/a9e99
 
 > **url**: `string`
 
-Defined in: [src/parser/html.ts:140](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/parser/html.ts#L140)
+Defined in: [src/parser/html.ts:140](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/parser/html.ts#L140)

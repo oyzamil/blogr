@@ -6,7 +6,7 @@
 
 # Interface: FoundImage
 
-Defined in: [src/modules/images.ts:6](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L6)
+Defined in: [src/modules/images.ts:6](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/images.ts#L6)
 
 One image found while scanning posts.
 
@@ -16,7 +16,7 @@ One image found while scanning posts.
 
 > **postId**: `string`
 
-Defined in: [src/modules/images.ts:10](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L10)
+Defined in: [src/modules/images.ts:10](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/images.ts#L10)
 
 Id of the post it was found in.
 
@@ -26,7 +26,7 @@ Id of the post it was found in.
 
 > **postUrl**: `string`
 
-Defined in: [src/modules/images.ts:12](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L12)
+Defined in: [src/modules/images.ts:12](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/images.ts#L12)
 
 URL of the post it was found in.
 
@@ -36,6 +36,6 @@ URL of the post it was found in.
 
 > **url**: `string`
 
-Defined in: [src/modules/images.ts:8](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L8)
+Defined in: [src/modules/images.ts:8](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/images.ts#L8)
 
 The image's own URL.

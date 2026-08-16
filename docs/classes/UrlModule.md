@@ -6,7 +6,7 @@
 
 # Class: UrlModule
 
-Defined in: [src/modules/url.ts:11](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L11)
+Defined in: [src/modules/url.ts:11](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L11)
 
 Builds raw Blogger feed URLs without performing any request.
 
@@ -16,7 +16,7 @@ Builds raw Blogger feed URLs without performing any request.
 
 > **new UrlModule**(`client`): `UrlModule`
 
-Defined in: [src/modules/url.ts:12](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L12)
+Defined in: [src/modules/url.ts:12](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L12)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/url.ts:12](https://github.com/oyzamil/blogr/blob/a9e999
 
 > **comments**(`postId?`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:49](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L49)
+Defined in: [src/modules/url.ts:49](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L49)
 
 URL for the comments feed (blog-wide, or scoped to `postId`).
 
@@ -58,7 +58,7 @@ URL for the comments feed (blog-wide, or scoped to `postId`).
 
 > **label**(`label`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:57](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L57)
+Defined in: [src/modules/url.ts:57](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L57)
 
 URL for the posts feed filtered to `label` (or several labels).
 
@@ -82,7 +82,7 @@ URL for the posts feed filtered to `label` (or several labels).
 
 > **page**(`pageId`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:39](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L39)
+Defined in: [src/modules/url.ts:39](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L39)
 
 URL for a single page entry.
 
@@ -106,7 +106,7 @@ URL for a single page entry.
 
 > **pages**(`options?`): `string`
 
-Defined in: [src/modules/url.ts:32](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L32)
+Defined in: [src/modules/url.ts:32](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L32)
 
 URL for the pages feed.
 
@@ -126,7 +126,7 @@ URL for the pages feed.
 
 > **post**(`postId`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:22](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L22)
+Defined in: [src/modules/url.ts:22](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L22)
 
 URL for a single post entry.
 
@@ -150,7 +150,7 @@ URL for a single post entry.
 
 > **posts**(`options?`): `string`
 
-Defined in: [src/modules/url.ts:15](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L15)
+Defined in: [src/modules/url.ts:15](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L15)
 
 URL for the posts feed.
 
@@ -170,7 +170,7 @@ URL for the posts feed.
 
 > **search**(`query`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:66](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L66)
+Defined in: [src/modules/url.ts:66](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L66)
 
 URL for a full-text search against the posts feed.
 

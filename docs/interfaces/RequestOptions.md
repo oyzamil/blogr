@@ -6,7 +6,7 @@
 
 # Interface: RequestOptions
 
-Defined in: [src/core/client.ts:22](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/client.ts#L22)
+Defined in: [src/core/client.ts:22](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/client.ts#L22)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/core/client.ts:22](https://github.com/oyzamil/blogr/blob/a9e999
 
 > `optional` **base?**: `string` \| `URL`
 
-Defined in: [src/core/client.ts:26](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/client.ts#L26)
+Defined in: [src/core/client.ts:26](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/client.ts#L26)
 
 Overrides the resolved base URL for this single request.
 
@@ -24,7 +24,7 @@ Overrides the resolved base URL for this single request.
 
 > `optional` **format?**: [`FeedFormat`](../type-aliases/FeedFormat.md)
 
-Defined in: [src/core/client.ts:24](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/client.ts#L24)
+Defined in: [src/core/client.ts:24](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/client.ts#L24)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/core/client.ts:24](https://github.com/oyzamil/blogr/blob/a9e999
 
 > `optional` **params?**: [`QueryOptions`](QueryOptions.md)
 
-Defined in: [src/core/client.ts:23](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/client.ts#L23)
+Defined in: [src/core/client.ts:23](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/client.ts#L23)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/core/client.ts:23](https://github.com/oyzamil/blogr/blob/a9e999
 
 > `optional` **signal?**: `AbortSignal`
 
-Defined in: [src/core/client.ts:27](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/client.ts#L27)
+Defined in: [src/core/client.ts:27](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/client.ts#L27)
