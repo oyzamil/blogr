@@ -2,11 +2,11 @@
 
 ***
 
-[blogr](../globals.md) / UrlModule
+[blogr](../README.md) / UrlModule
 
 # Class: UrlModule
 
-Defined in: [src/modules/url.ts:12](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L12)
+Defined in: [src/modules/url.ts:11](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L11)
 
 Builds raw Blogger feed URLs without performing any request.
 
@@ -16,7 +16,7 @@ Builds raw Blogger feed URLs without performing any request.
 
 > **new UrlModule**(`client`): `UrlModule`
 
-Defined in: [src/modules/url.ts:13](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L13)
+Defined in: [src/modules/url.ts:12](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L12)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/url.ts:13](https://github.com/oyzamil/blogr/blob/1c6cb2
 
 > **comments**(`postId?`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:50](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L50)
+Defined in: [src/modules/url.ts:49](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L49)
 
 URL for the comments feed (blog-wide, or scoped to `postId`).
 
@@ -54,11 +54,35 @@ URL for the comments feed (blog-wide, or scoped to `postId`).
 
 ***
 
+### label()
+
+> **label**(`label`, `options?`): `string`
+
+Defined in: [src/modules/url.ts:57](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L57)
+
+URL for the posts feed filtered to `label` (or several labels).
+
+#### Parameters
+
+##### label
+
+`string` \| `string`[]
+
+##### options?
+
+[`UrlOptions`](../interfaces/UrlOptions.md) = `{}`
+
+#### Returns
+
+`string`
+
+***
+
 ### page()
 
 > **page**(`pageId`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:40](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L40)
+Defined in: [src/modules/url.ts:39](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L39)
 
 URL for a single page entry.
 
@@ -82,7 +106,7 @@ URL for a single page entry.
 
 > **pages**(`options?`): `string`
 
-Defined in: [src/modules/url.ts:33](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L33)
+Defined in: [src/modules/url.ts:32](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L32)
 
 URL for the pages feed.
 
@@ -102,7 +126,7 @@ URL for the pages feed.
 
 > **post**(`postId`, `options?`): `string`
 
-Defined in: [src/modules/url.ts:23](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L23)
+Defined in: [src/modules/url.ts:22](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L22)
 
 URL for a single post entry.
 
@@ -126,11 +150,35 @@ URL for a single post entry.
 
 > **posts**(`options?`): `string`
 
-Defined in: [src/modules/url.ts:16](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/url.ts#L16)
+Defined in: [src/modules/url.ts:15](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L15)
 
 URL for the posts feed.
 
 #### Parameters
+
+##### options?
+
+[`UrlOptions`](../interfaces/UrlOptions.md) = `{}`
+
+#### Returns
+
+`string`
+
+***
+
+### search()
+
+> **search**(`query`, `options?`): `string`
+
+Defined in: [src/modules/url.ts:66](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/url.ts#L66)
+
+URL for a full-text search against the posts feed.
+
+#### Parameters
+
+##### query
+
+`string`
 
 ##### options?
 

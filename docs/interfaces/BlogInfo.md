@@ -2,11 +2,11 @@
 
 ***
 
-[blogr](../globals.md) / BlogInfo
+[blogr](../README.md) / BlogInfo
 
 # Interface: BlogInfo
 
-Defined in: [src/types/feed.ts:44](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L44)
+Defined in: [src/types/feed.ts:60](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L60)
 
 Blog-level metadata.
 
@@ -16,7 +16,7 @@ Blog-level metadata.
 
 > **author**: [`Author`](Author.md)
 
-Defined in: [src/types/feed.ts:60](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L60)
+Defined in: [src/types/feed.ts:76](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L76)
 
 Blog author/owner.
 
@@ -26,7 +26,7 @@ Blog author/owner.
 
 > **favicon**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:62](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L62)
+Defined in: [src/types/feed.ts:78](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L78)
 
 Favicon URL, best-effort (derived), or `null`.
 
@@ -36,7 +36,7 @@ Favicon URL, best-effort (derived), or `null`.
 
 > **id**: `string`
 
-Defined in: [src/types/feed.ts:46](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L46)
+Defined in: [src/types/feed.ts:62](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L62)
 
 Numeric Blogger blog id.
 
@@ -46,7 +46,7 @@ Numeric Blogger blog id.
 
 > **labels**: `string`[]
 
-Defined in: [src/types/feed.ts:54](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L54)
+Defined in: [src/types/feed.ts:70](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L70)
 
 All labels currently known to the feed response.
 
@@ -56,7 +56,7 @@ All labels currently known to the feed response.
 
 > **language**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:56](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L56)
+Defined in: [src/types/feed.ts:72](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L72)
 
 Language code of the blog, if available.
 
@@ -66,7 +66,7 @@ Language code of the blog, if available.
 
 > **links**: [`Link`](Link.md)[]
 
-Defined in: [src/types/feed.ts:64](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L64)
+Defined in: [src/types/feed.ts:80](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L80)
 
 Raw `<link>` entries from the feed.
 
@@ -76,7 +76,7 @@ Raw `<link>` entries from the feed.
 
 > **subtitle**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:50](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L50)
+Defined in: [src/types/feed.ts:66](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L66)
 
 Blog subtitle/description, or `null`.
 
@@ -86,7 +86,7 @@ Blog subtitle/description, or `null`.
 
 > **title**: `string`
 
-Defined in: [src/types/feed.ts:48](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L48)
+Defined in: [src/types/feed.ts:64](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L64)
 
 Blog title.
 
@@ -96,7 +96,7 @@ Blog title.
 
 > **updated**: `string`
 
-Defined in: [src/types/feed.ts:58](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L58)
+Defined in: [src/types/feed.ts:74](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L74)
 
 ISO timestamp of the last update to the blog.
 
@@ -106,6 +106,6 @@ ISO timestamp of the last update to the blog.
 
 > **url**: `string`
 
-Defined in: [src/types/feed.ts:52](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/feed.ts#L52)
+Defined in: [src/types/feed.ts:68](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L68)
 
 Canonical URL of the blog.

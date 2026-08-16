@@ -79,7 +79,9 @@
 		const [info, stats, authors] = await Promise.all([
 			blog.info(),
 			blog.stats(),
-			blog.authors(),
+			// capped — blog.authors() with no sampleSize now scans every
+			// post in the blog, too heavy for a landing-page preview
+			blog.authors({ sampleSize: 50 }),
 		]);
 		setStatus(
 			infoStatus,
@@ -95,13 +97,14 @@
 					<dt>Author</dt><dd>${escapeHtml(info.author.name || "—")}</dd>
 					<dt>Updated</dt><dd>${fmtDate(info.updated)}</dd>
 					<dt>Favicon</dt><dd><a href="${info.favicon}" target="_blank" rel="noreferrer">${escapeHtml(info.favicon || "—")}</a></dd>
-					<dt>Authors seen</dt><dd>${authors.map((a) => escapeHtml(a.name || "—")).join(", ")}</dd>
+					<dt>Authors seen (last 50 posts)</dt><dd>${authors.map((a) => `${escapeHtml(a.name || "—")} (${a.totalPosts})`).join(", ")}</dd>
 				</dl>
 				<div class="stat-row">
 					<div class="stat"><div class="num">${stats.posts}</div><div class="label">Posts</div></div>
 					<div class="stat"><div class="num">${stats.pages}</div><div class="label">Pages</div></div>
 					<div class="stat"><div class="num">${stats.comments}</div><div class="label">Comments</div></div>
 					<div class="stat"><div class="num">${stats.labels}</div><div class="label">Labels</div></div>
+					<div class="stat"><div class="num">${stats.lastPostDate ? fmtDate(stats.lastPostDate) : "—"}</div><div class="label">Last post</div></div>
 				</div>
 			</div>`;
 	} catch (err) {

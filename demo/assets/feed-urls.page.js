@@ -115,6 +115,16 @@
 					url = blog.url.comments(id, { format });
 					code = `blog.url.comments(${JSON.stringify(id)}, { format: "${format}" })`;
 					break;
+				case "label":
+					if (!id) throw new Error("label is required for url.label()");
+					url = blog.url.label(id, { format });
+					code = `blog.url.label(${JSON.stringify(id)}, { format: "${format}" })`;
+					break;
+				case "search":
+					if (!id) throw new Error("query is required for url.search()");
+					url = blog.url.search(id, { format });
+					code = `blog.url.search(${JSON.stringify(id)}, { format: "${format}" })`;
+					break;
 			}
 			el("url-code").innerHTML = highlightCode(`${code};\n// -> ${url}`);
 			el("url-result").innerHTML =

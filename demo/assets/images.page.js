@@ -7,28 +7,40 @@
 
 	async function loadGallery() {
 		const status = el("img-status");
-		setStatus(status, "loading", "scanning recent posts…");
+		const sampleSize = Number(el("img-sample").value);
+		const options = {};
+		if (!Number.isNaN(sampleSize) && sampleSize > 0)
+			options.sampleSize = sampleSize;
+
+		setStatus(
+			status,
+			"loading",
+			options.sampleSize
+				? `scanning ${options.sampleSize} post(s)…`
+				: "scanning every post…",
+		);
 		try {
-			const sampleSize = Number(el("img-sample").value) || 15;
-			const urls = await blog.images({ sampleSize });
+			const images = await blog.images(options);
 			setStatus(
 				status,
 				"ok",
-				`${urls.length} unique image(s) found across ${sampleSize} post(s)`,
+				`${images.length} unique image(s) · ${
+					options.sampleSize
+						? `sampled ${options.sampleSize} posts`
+						: "scanned all posts"
+				}`,
 			);
 			const gallery = el("img-gallery");
-			gallery.innerHTML = urls.length
-				? urls
+			gallery.innerHTML = images.length
+				? images
 						.map(
-							(u) => `
-					<div class="post-card" data-url="${escapeHtml(u)}" style="cursor:pointer" title="Click to load in the resizeImage() playground below">
-						<div class="post-card__thumb"><img data-src="${escapeHtml(u)}" alt=""></div>
+							(img) => `
+					<div class="post-card" data-url="${escapeHtml(img.url)}" data-post-url="${escapeHtml(img.postUrl)}" style="cursor:pointer" title="From: ${escapeHtml(img.postUrl)} — click to load in the resizeImage() playground below">
+						<div class="post-card__thumb"><img data-src="${escapeHtml(img.url)}" alt=""></div>
 					</div>`,
 						)
 						.join("")
-				: emptyBox(
-						"No images found in this sample — try a larger sample size.",
-					);
+				: emptyBox("No images found — try scanning without a sample size cap.");
 			if (window.BlogrPlugins)
 				window.BlogrPlugins.lazify(gallery.querySelectorAll("img[data-src]"));
 			gallery.querySelectorAll(".post-card").forEach((card) =>

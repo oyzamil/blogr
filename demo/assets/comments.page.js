@@ -115,5 +115,47 @@
 		}
 	});
 
+	el("cm-run").addEventListener("click", async () => {
+		const status = el("cm-status");
+		const out = el("cm-result");
+		const postId = el("cm-postid").value.trim() || undefined;
+		const sampleSize = Number(el("cm-sample").value);
+		const options = { postId };
+		if (!Number.isNaN(sampleSize) && sampleSize > 0)
+			options.sampleSize = sampleSize;
+
+		setStatus(
+			status,
+			"loading",
+			options.sampleSize
+				? `scanning ${options.sampleSize} comment(s)…`
+				: "scanning every comment…",
+		);
+		try {
+			const commenters = await blog.commenters(options);
+			commenters.sort((a, b) => b.totalComments - a.totalComments);
+			setStatus(
+				status,
+				"ok",
+				`${commenters.length} commenter(s) · ${
+					options.sampleSize
+						? `sampled ${options.sampleSize} comments`
+						: "scanned all comments"
+				}`,
+			);
+			out.innerHTML = commenters.length
+				? commenters
+						.map(
+							(c) =>
+								`<span class="chip">${escapeHtml(c.name ?? "unknown")} · ${c.totalComments}</span>`,
+						)
+						.join("")
+				: emptyBox("No commenters found.");
+		} catch (err) {
+			setStatus(status, "error", "request failed");
+			out.innerHTML = errorBox(err);
+		}
+	});
+
 	runComments();
 })();

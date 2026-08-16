@@ -2,13 +2,13 @@
 
 ***
 
-[blogr](../globals.md) / LatestOptions
+[blogr](../README.md) / LatestOptions
 
 # Type Alias: LatestOptions
 
 > **LatestOptions** = `number` \| `Omit`\<[`PostsListOptions`](../interfaces/PostsListOptions.md), `"orderBy"` \| `"startIndex"`\>
 
-Defined in: [src/types/options.ts:54](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/options.ts#L54)
+Defined in: [src/types/options.ts:58](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/options.ts#L58)
 
 Options for [PostsModule.latest](../classes/PostsModule.md#latest). A bare
 `number` is shorthand for `{ limit: number }`; pass an object instead to

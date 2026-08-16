@@ -1,28 +1,58 @@
-import type { RequestOptions } from "../types/options";
-import type { PostsModule } from "./posts";
-
 import { extractImages } from "../parser/html";
+import { type RequestOptions } from "../types/options";
+import { type PostsModule } from "./posts";
+
+/** One image found while scanning posts. */
+export interface FoundImage {
+	/** The image's own URL. */
+	url: string;
+	/** Id of the post it was found in. */
+	postId: string;
+	/** URL of the post it was found in. */
+	postUrl: string;
+}
 
 /** Aggregate image discovery across posts. */
 export class ImagesModule {
 	constructor(private readonly posts: PostsModule) {}
 
 	/**
-	 * Returns every unique image URL found in the content of up to
-	 * `sampleSize` (default 25) of the blog's most recent posts.
+	 * Returns every unique image found in post content, each tagged with
+	 * the post it came from.
+	 *
+	 * By default (no `sampleSize`) `max-results` is not sent on the request
+	 * at all, and every page is walked via pagination until exhausted — so
+	 * every post in the blog gets scanned. Pass `sampleSize` to cap the
+	 * scan to a single request of that many most-recent posts instead.
 	 */
 	async list(
 		options: { sampleSize?: number } = {},
 		requestOptions: RequestOptions = {},
-	): Promise<string[]> {
-		const page = await this.posts.list(
-			{ limit: options.sampleSize ?? 25 },
+	): Promise<FoundImage[]> {
+		const seen = new Set<string>();
+		const found: FoundImage[] = [];
+
+		let page = await this.posts.list(
+			{ limit: options.sampleSize ?? null },
 			requestOptions,
 		);
-		const found = new Set<string>();
-		for (const post of page.items) {
-			for (const url of extractImages(post)) found.add(url);
+
+		while (true) {
+			for (const post of page.items) {
+				for (const url of extractImages(post)) {
+					if (seen.has(url)) continue;
+					seen.add(url);
+					found.push({ url, postId: post.id, postUrl: post.url });
+				}
+			}
+
+			if (options.sampleSize !== undefined) break;
+
+			const next = await page.next(requestOptions);
+			if (!next) break;
+			page = next;
 		}
-		return [...found];
+
+		return found;
 	}
 }

@@ -1,6 +1,5 @@
-import type { Client } from "../core/client";
-import type { FeedFormat } from "../core/http";
-
+import { type Client } from "../core/client";
+import { type FeedFormat } from "../core/http";
 import { assertNonBlankString } from "../core/utils";
 
 export interface UrlOptions {
@@ -52,5 +51,25 @@ export class UrlModule {
 			? `./${encodeURIComponent(postId)}/comments/default`
 			: "./comments/default";
 		return this.client.resolveUrl(path, { format: options.format }).toString();
+	}
+
+	/** URL for the posts feed filtered to `label` (or several labels). */
+	label(label: string | string[], options: UrlOptions = {}): string {
+		const labels = Array.isArray(label) ? label : [label];
+		const segment = labels.map((l) => encodeURIComponent(l)).join("/");
+		return this.client
+			.resolveUrl(`./posts/default/-/${segment}`, { format: options.format })
+			.toString();
+	}
+
+	/** URL for a full-text search against the posts feed. */
+	search(query: string, options: UrlOptions = {}): string {
+		assertNonBlankString(query, "query");
+		return this.client
+			.resolveUrl("./posts/default", {
+				format: options.format,
+				params: { query },
+			})
+			.toString();
 	}
 }

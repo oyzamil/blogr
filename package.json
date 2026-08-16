@@ -1,6 +1,6 @@
 {
 	"name": "blogr",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A modern, modular, fully-typed SDK for the Blogger (Blogspot) public feed API.",
 	"keywords": [
 		"blogger",

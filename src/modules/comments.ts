@@ -1,14 +1,18 @@
-import type { Client } from "../core/client";
-import type { Comment } from "../types/feed";
-import type {
-	CommentsListOptions,
-	Pager,
-	RequestOptions,
-} from "../types/options";
-
+import { type Client } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString, isUndefined } from "../core/utils";
+import { type Author, type Comment } from "../types/feed";
+import {
+	type CommentsListOptions,
+	type Pager,
+	type RequestOptions,
+} from "../types/options";
+
+/** An {@link Author} plus how many of the scanned comments are theirs. */
+export interface CommenterWithCount extends Author {
+	totalComments: number;
+}
 
 /** Methods for listing and fetching comments. */
 export class CommentsModule {
@@ -85,5 +89,49 @@ export class CommentsModule {
 		}
 
 		return null;
+	}
+
+	/**
+	 * Lists distinct commenters, each with their comment count.
+	 *
+	 * By default (no `sampleSize`) `max-results` is not sent on the
+	 * request, and every page is walked via pagination until exhausted —
+	 * so every comment on the blog gets counted. Pass `sampleSize` to cap
+	 * the scan to a single request of that many most-recent comments
+	 * instead. Pass `postId` to scope to one post's commenters.
+	 */
+	async commenters(
+		options: { postId?: string; sampleSize?: number } = {},
+		requestOptions: RequestOptions = {},
+	): Promise<CommenterWithCount[]> {
+		const counts = new Map<string, { author: Author; totalComments: number }>();
+
+		let page = await this.list(
+			{ postId: options.postId, limit: options.sampleSize ?? null },
+			requestOptions,
+		);
+
+		while (true) {
+			for (const comment of page.items) {
+				const key = comment.author.url ?? comment.author.name ?? "unknown";
+				const existing = counts.get(key);
+				if (existing) {
+					existing.totalComments += 1;
+				} else {
+					counts.set(key, { author: comment.author, totalComments: 1 });
+				}
+			}
+
+			if (options.sampleSize !== undefined) break;
+
+			const next = await page.next(requestOptions);
+			if (!next) break;
+			page = next;
+		}
+
+		return [...counts.values()].map(({ author, totalComments }) => ({
+			...author,
+			totalComments,
+		}));
 	}
 }

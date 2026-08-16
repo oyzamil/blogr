@@ -2,18 +2,17 @@
 
 ***
 
-[blogr](../README.md) / Author
+[blogr](../README.md) / CommenterWithCount
 
-# Interface: Author
+# Interface: CommenterWithCount
 
-Defined in: [src/types/feed.ts:2](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L2)
+Defined in: [src/modules/comments.ts:13](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/comments.ts#L13)
 
-An author of a post, page, comment or the blog itself.
+An [Author](Author.md) plus how many of the scanned comments are theirs.
 
-## Extended by
+## Extends
 
-- [`AuthorWithPostCount`](AuthorWithPostCount.md)
-- [`CommenterWithCount`](CommenterWithCount.md)
+- [`Author`](Author.md)
 
 ## Properties
 
@@ -25,6 +24,10 @@ Defined in: [src/types/feed.ts:18](https://github.com/oyzamil/blogr/blob/a9e9999
 
 Email on file, or `null`. Blogger's public feed almost always masks
 this as `noreply@blogger.com` for privacy — rarely a real address.
+
+#### Inherited from
+
+[`Author`](Author.md).[`email`](Author.md#email)
 
 ***
 
@@ -39,6 +42,10 @@ digits of `.../profile/12345678901234567890`), or `null` if `url`
 isn't a recognizable profile link. More stable than matching on
 `name`, which can change or collide between authors.
 
+#### Inherited from
+
+[`Author`](Author.md).[`id`](Author.md#id)
+
 ***
 
 ### image
@@ -48,6 +55,10 @@ isn't a recognizable profile link. More stable than matching on
 Defined in: [src/types/feed.ts:20](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L20)
 
 Avatar/profile image URL of the author, or `null` if unavailable.
+
+#### Inherited from
+
+[`Author`](Author.md).[`image`](Author.md#image)
 
 ***
 
@@ -59,6 +70,10 @@ Defined in: [src/types/feed.ts:24](https://github.com/oyzamil/blogr/blob/a9e9999
 
 Avatar height in px, if the feed reported one, else `null`.
 
+#### Inherited from
+
+[`Author`](Author.md).[`imageHeight`](Author.md#imageheight)
+
 ***
 
 ### imageWidth
@@ -68,6 +83,10 @@ Avatar height in px, if the feed reported one, else `null`.
 Defined in: [src/types/feed.ts:22](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L22)
 
 Avatar width in px, if the feed reported one, else `null`.
+
+#### Inherited from
+
+[`Author`](Author.md).[`imageWidth`](Author.md#imagewidth)
 
 ***
 
@@ -79,6 +98,18 @@ Defined in: [src/types/feed.ts:4](https://github.com/oyzamil/blogr/blob/a9e99998
 
 Display name of the author, or `null` if unavailable.
 
+#### Inherited from
+
+[`Author`](Author.md).[`name`](Author.md#name)
+
+***
+
+### totalComments
+
+> **totalComments**: `number`
+
+Defined in: [src/modules/comments.ts:14](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/comments.ts#L14)
+
 ***
 
 ### url
@@ -88,3 +119,7 @@ Display name of the author, or `null` if unavailable.
 Defined in: [src/types/feed.ts:6](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/feed.ts#L6)
 
 Profile URL of the author, or `null` if unavailable.
+
+#### Inherited from
+
+[`Author`](Author.md).[`url`](Author.md#url)

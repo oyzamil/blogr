@@ -40,6 +40,27 @@
 
 			<div class="card">
 				<div class="card__head">
+					<h3>blog.labelCounts(options)</h3>
+					<span class="endpoint">scans posts for a post-count per label</span>
+				</div>
+				<div class="card__body">
+					<p style="margin:0 0 12px;font-size:0.8rem;color:var(--muted-foreground,#6b7280)">
+						<code>labels()</code> above is one cheap request but has no counts — this instead
+						scans posts to tally them. Blank sampleSize = scans every post (no
+						<code>max-results</code> sent); set a number to cap it to one request.
+					</p>
+					<div class="actions-row">
+						<input type="number" id="labelcounts-sample" placeholder="all" min="1" max="50"
+							style="width:90px;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--paper);color:var(--ink)" />
+						<button class="btn btn-primary btn-sm" id="labelcounts-run">Run blog.labelCounts()</button>
+					</div>
+					<div class="status-line" id="labelcounts-status"></div>
+					<div class="chips" id="labelcounts-chips"></div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card__head">
 					<h3>blog.label(label, options)</h3>
 					<span class="endpoint">GET ./posts/default/-/{label}</span>
 				</div>

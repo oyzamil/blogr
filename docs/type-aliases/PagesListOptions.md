@@ -2,12 +2,12 @@
 
 ***
 
-[blogr](../globals.md) / PagesListOptions
+[blogr](../README.md) / PagesListOptions
 
 # Type Alias: PagesListOptions
 
 > **PagesListOptions** = [`BaseListOptions`](../interfaces/BaseListOptions.md)
 
-Defined in: [src/types/options.ts:68](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/types/options.ts#L68)
+Defined in: [src/types/options.ts:72](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/types/options.ts#L72)
 
 Options for [PagesModule.list](../classes/PagesModule.md#list).

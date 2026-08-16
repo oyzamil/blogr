@@ -2,11 +2,11 @@
 
 ***
 
-[blogr](../globals.md) / ImagesModule
+[blogr](../README.md) / ImagesModule
 
 # Class: ImagesModule
 
-Defined in: [src/modules/images.ts:7](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/images.ts#L7)
+Defined in: [src/modules/images.ts:16](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L16)
 
 Aggregate image discovery across posts.
 
@@ -16,7 +16,7 @@ Aggregate image discovery across posts.
 
 > **new ImagesModule**(`posts`): `ImagesModule`
 
-Defined in: [src/modules/images.ts:8](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/images.ts#L8)
+Defined in: [src/modules/images.ts:17](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L17)
 
 #### Parameters
 
@@ -32,12 +32,17 @@ Defined in: [src/modules/images.ts:8](https://github.com/oyzamil/blogr/blob/1c6c
 
 ### list()
 
-> **list**(`options?`, `requestOptions?`): `Promise`\<`string`[]\>
+> **list**(`options?`, `requestOptions?`): `Promise`\<[`FoundImage`](../interfaces/FoundImage.md)[]\>
 
-Defined in: [src/modules/images.ts:14](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/images.ts#L14)
+Defined in: [src/modules/images.ts:28](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/images.ts#L28)
 
-Returns every unique image URL found in the content of up to
-`sampleSize` (default 25) of the blog's most recent posts.
+Returns every unique image found in post content, each tagged with
+the post it came from.
+
+By default (no `sampleSize`) `max-results` is not sent on the request
+at all, and every page is walked via pagination until exhausted — so
+every post in the blog gets scanned. Pass `sampleSize` to cap the
+scan to a single request of that many most-recent posts instead.
 
 #### Parameters
 
@@ -53,4 +58,4 @@ Returns every unique image URL found in the content of up to
 
 #### Returns
 
-`Promise`\<`string`[]\>
+`Promise`\<[`FoundImage`](../interfaces/FoundImage.md)[]\>

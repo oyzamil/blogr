@@ -68,6 +68,48 @@
 
 	el("label-run").addEventListener("click", runLabel);
 
+	async function runLabelCounts() {
+		const status = el("labelcounts-status");
+		const box = el("labelcounts-chips");
+		const sampleSize = Number(el("labelcounts-sample").value);
+		const options = {};
+		if (!Number.isNaN(sampleSize) && sampleSize > 0)
+			options.sampleSize = sampleSize;
+
+		setStatus(
+			status,
+			"loading",
+			options.sampleSize
+				? `scanning ${options.sampleSize} post(s)…`
+				: "scanning every post…",
+		);
+		try {
+			const counts = await blog.labelCounts(options);
+			counts.sort((a, b) => b.postCount - a.postCount);
+			setStatus(
+				status,
+				"ok",
+				`${counts.length} label(s) · ${
+					options.sampleSize
+						? `sampled ${options.sampleSize} posts`
+						: "scanned all posts"
+				}`,
+			);
+			box.innerHTML = counts.length
+				? counts
+						.map(
+							(c) =>
+								`<span class="chip">${escapeHtml(c.label)} · ${c.postCount}</span>`,
+						)
+						.join("")
+				: emptyBox("No labels found.");
+		} catch (err) {
+			setStatus(status, "error", "request failed");
+			box.innerHTML = errorBox(err);
+		}
+	}
+	el("labelcounts-run").addEventListener("click", runLabelCounts);
+
 	el("categories-run").addEventListener("click", async () => {
 		const out = el("categories-result");
 		out.innerHTML = `<div class="status-line is-loading"><span class="dot"></span>fetching…</div>`;

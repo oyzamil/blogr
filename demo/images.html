@@ -31,11 +31,15 @@
 			<div class="card">
 				<div class="card__head">
 					<h3>blog.images(options)</h3>
-					<span class="endpoint">scraped from a sample of recent posts</span>
+					<span class="endpoint">GET ./posts/default{?max-results=sampleSize}</span>
 				</div>
 				<div class="card__body">
+					<p style="margin:0 0 12px;font-size:0.8rem;color:var(--muted-foreground,#6b7280)">
+						Blank sampleSize = scans every post (no <code>max-results</code> sent, follows
+						pagination until exhausted). Set a number to cap it to one request instead.
+					</p>
 					<div class="actions-row">
-						<input type="number" id="img-sample" value="15" min="1" max="50"
+						<input type="number" id="img-sample" placeholder="all" min="1" max="50"
 							style="width:90px;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--paper);color:var(--ink)" />
 						<button class="btn btn-primary btn-sm" id="img-run">Run blog.images()</button>
 					</div>

@@ -2,11 +2,11 @@
 
 ***
 
-[blogr](../globals.md) / Cache
+[blogr](../README.md) / Cache
 
 # Class: Cache
 
-Defined in: [src/core/cache.ts:10](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L10)
+Defined in: [src/core/cache.ts:10](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L10)
 
 A tiny in-memory cache keyed by request URL. Disabled by default —
 call [Cache.enable](#enable) to turn it on.
@@ -29,11 +29,25 @@ call [Cache.enable](#enable) to turn it on.
 
 > **get** **isEnabled**(): `boolean`
 
-Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L34)
+Defined in: [src/core/cache.ts:43](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L43)
 
 ##### Returns
 
 `boolean`
+
+***
+
+### size
+
+#### Get Signature
+
+> **get** **size**(): `number`
+
+Defined in: [src/core/cache.ts:37](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L37)
+
+##### Returns
+
+`number`
 
 ## Methods
 
@@ -41,7 +55,7 @@ Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/1c6cb2d
 
 > **clear**(): `this`
 
-Defined in: [src/core/cache.ts:29](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L29)
+Defined in: [src/core/cache.ts:29](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L29)
 
 Clears every cached entry.
 
@@ -51,11 +65,29 @@ Clears every cached entry.
 
 ***
 
+### delete()
+
+> **delete**(`key`): `boolean`
+
+Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L34)
+
+#### Parameters
+
+##### key
+
+`string`
+
+#### Returns
+
+`boolean`
+
+***
+
 ### disable()
 
 > **disable**(): `this`
 
-Defined in: [src/core/cache.ts:23](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L23)
+Defined in: [src/core/cache.ts:23](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L23)
 
 Disables caching (existing entries are kept, but bypassed until re-enabled).
 
@@ -69,7 +101,7 @@ Disables caching (existing entries are kept, but bypassed until re-enabled).
 
 > **enable**(`options?`): `this`
 
-Defined in: [src/core/cache.ts:16](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L16)
+Defined in: [src/core/cache.ts:16](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L16)
 
 Enables caching. Optionally pass a TTL in milliseconds.
 
@@ -91,7 +123,7 @@ Enables caching. Optionally pass a TTL in milliseconds.
 
 > **get**\<`T`\>(`key`): `T` \| `undefined`
 
-Defined in: [src/core/cache.ts:38](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L38)
+Defined in: [src/core/cache.ts:47](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L47)
 
 #### Type Parameters
 
@@ -111,11 +143,29 @@ Defined in: [src/core/cache.ts:38](https://github.com/oyzamil/blogr/blob/1c6cb2d
 
 ***
 
+### has()
+
+> **has**(`key`): `boolean`
+
+Defined in: [src/core/cache.ts:40](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L40)
+
+#### Parameters
+
+##### key
+
+`string`
+
+#### Returns
+
+`boolean`
+
+***
+
 ### set()
 
 > **set**\<`T`\>(`key`, `value`): `void`
 
-Defined in: [src/core/cache.ts:49](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/core/cache.ts#L49)
+Defined in: [src/core/cache.ts:58](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/core/cache.ts#L58)
 
 #### Type Parameters
 

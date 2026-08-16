@@ -4,10 +4,10 @@ import { type BloggerEventMap, type BloggerEventName } from "./core/events";
 import { assertNonBlankString, isString } from "./core/utils";
 import { ArchiveModule } from "./modules/archive";
 import { AuthorsModule, type AuthorWithPostCount } from "./modules/authors";
-import { CommentsModule } from "./modules/comments";
+import { type CommenterWithCount, CommentsModule } from "./modules/comments";
 import { FeedModule } from "./modules/feed";
-import { ImagesModule } from "./modules/images";
-import { LabelsModule } from "./modules/labels";
+import { type FoundImage, ImagesModule } from "./modules/images";
+import { LabelsModule, type LabelWithPostCount } from "./modules/labels";
 import { PagesModule } from "./modules/pages";
 import { PostsModule } from "./modules/posts";
 import { SearchModule } from "./modules/search";
@@ -240,6 +240,19 @@ export class Blogr {
 		);
 	}
 
+	/**
+	 * Distinct commenters, each with their comment count. By default scans
+	 * every comment on the blog (no `max-results` sent, follows pagination
+	 * until exhausted); pass `sampleSize` to cap to one request instead.
+	 * Pass `postId` to scope to one post's commenters.
+	 */
+	async commenters(
+		options?: { postId?: string; sampleSize?: number },
+		requestOptions?: RequestOptions,
+	): Promise<CommenterWithCount[]> {
+		return this.commentsModule.commenters(options, requestOptions);
+	}
+
 	// ---------------------------------------------------------------------
 	// Labels / categories
 	// ---------------------------------------------------------------------
@@ -263,6 +276,18 @@ export class Blogr {
 		return this.labels(requestOptions);
 	}
 
+	/**
+	 * Every label with a post count. By default scans every post in the
+	 * blog (no `max-results` sent, follows pagination until exhausted);
+	 * pass `sampleSize` to cap to one request instead.
+	 */
+	async labelCounts(
+		options?: { sampleSize?: number },
+		requestOptions?: RequestOptions,
+	): Promise<LabelWithPostCount[]> {
+		return this.labelsModule.counts(options, requestOptions);
+	}
+
 	// ---------------------------------------------------------------------
 	// Search
 	// ---------------------------------------------------------------------
@@ -279,11 +304,16 @@ export class Blogr {
 	// Images
 	// ---------------------------------------------------------------------
 
-	/** Unique image URLs found across a sample of recent posts. */
+	/**
+	 * Unique images found across post content, each tagged with the post
+	 * it came from. By default scans every post in the blog (no
+	 * `max-results` sent, follows pagination until exhausted); pass
+	 * `sampleSize` to cap to one request instead.
+	 */
 	async images(
 		options?: { sampleSize?: number },
 		requestOptions?: RequestOptions,
-	): Promise<string[]> {
+	): Promise<FoundImage[]> {
 		return this.imagesModule.list(options, requestOptions);
 	}
 

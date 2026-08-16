@@ -107,6 +107,33 @@
 					<div id="cid-result"></div>
 				</div>
 			</div>
+			<div class="card">
+				<div class="card__head">
+					<h3>blog.commenters(options)</h3>
+					<span class="endpoint">scans comments for a per-commenter count</span>
+				</div>
+				<div class="card__desc">Distinct commenters, each with their comment count. Blank sampleSize =
+					scans every comment on the blog (no <code>max-results</code> sent, follows pagination until
+					exhausted). Optionally scope to a single post's commenters.
+				</div>
+				<div class="card__body">
+					<div class="controls">
+						<div class="field">
+							<label for="cm-postid">postId (optional)</label>
+							<input type="text" id="cm-postid" placeholder="blank = whole blog" />
+						</div>
+						<div class="field">
+							<label for="cm-sample">sampleSize</label>
+							<input type="number" id="cm-sample" placeholder="all" min="1" max="500" />
+						</div>
+					</div>
+					<div class="actions-row">
+						<button class="btn btn-primary btn-sm" id="cm-run">Run blog.commenters()</button>
+					</div>
+					<div class="status-line" id="cm-status"></div>
+					<div id="cm-result" class="chips"></div>
+				</div>
+			</div>
 		</main>
 	</div>
 

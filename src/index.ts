@@ -6,7 +6,10 @@ export type {
 } from "./core/events";
 export type { buildUrl, FeedFormat, QueryOptions } from "./core/http";
 export type { AuthorWithPostCount } from "./modules/authors";
+export type { CommenterWithCount } from "./modules/comments";
 export type { FeedOptions } from "./modules/feed";
+export type { FoundImage } from "./modules/images";
+export type { LabelWithPostCount } from "./modules/labels";
 export type { BlogStats } from "./modules/stats";
 export type { UrlOptions } from "./modules/url";
 export type {

@@ -2,13 +2,13 @@
 
 ***
 
-[blogr](../globals.md) / parseFeed
+[blogr](../README.md) / parseFeed
 
 # Function: parseFeed()
 
 > **parseFeed**(`input`): [`ParsedFeed`](../interfaces/ParsedFeed.md)
 
-Defined in: [src/parser/feed-parser.ts:344](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/parser/feed-parser.ts#L344)
+Defined in: [src/parser/feed-parser.ts:373](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/parser/feed-parser.ts#L373)
 
 Parses a raw Blogger GData JSON response (the shape returned by
 `?alt=json`) into a typed [ParsedFeed](../interfaces/ParsedFeed.md).

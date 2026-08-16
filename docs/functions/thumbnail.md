@@ -2,13 +2,13 @@
 
 ***
 
-[blogr](../globals.md) / thumbnail
+[blogr](../README.md) / thumbnail
 
 # Function: thumbnail()
 
 > **thumbnail**(`input`): `string` \| `null`
 
-Defined in: [src/parser/html.ts:239](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/parser/html.ts#L239)
+Defined in: [src/parser/html.ts:239](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/parser/html.ts#L239)
 
 Best available thumbnail for a post: Blogger's own pick, else the first extracted image.
 

@@ -2,15 +2,24 @@
 
 ***
 
-[blogr](../globals.md) / AuthorsModule
+[blogr](../README.md) / AuthorsModule
 
 # Class: AuthorsModule
 
-Defined in: [src/modules/authors.ts:10](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/authors.ts#L10)
+Defined in: [src/modules/authors.ts:31](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/authors.ts#L31)
 
-Lists distinct post authors. Blogger's feed API has no dedicated authors
-endpoint, so this aggregates authors seen across up to `sampleSize`
-(default 150) of the blog's most recent posts.
+Lists distinct post authors, each with post count and stats derived from
+their posts.
+
+Blogger's feed API has no dedicated authors endpoint, so this aggregates
+authors seen across the blog's posts.
+
+By default (no `sampleSize`) `max-results` is not sent on the request at
+all, and every page of results is walked via the feed's own pagination
+until exhausted — so every author across every post is counted, at the
+cost of one request per page for blogs with a lot of posts. Pass
+`sampleSize` to instead cap the scan to a single request of that many
+most-recent posts.
 
 ## Constructors
 
@@ -18,7 +27,7 @@ endpoint, so this aggregates authors seen across up to `sampleSize`
 
 > **new AuthorsModule**(`posts`): `AuthorsModule`
 
-Defined in: [src/modules/authors.ts:11](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/authors.ts#L11)
+Defined in: [src/modules/authors.ts:32](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/authors.ts#L32)
 
 #### Parameters
 
@@ -34,9 +43,9 @@ Defined in: [src/modules/authors.ts:11](https://github.com/oyzamil/blogr/blob/1c
 
 ### list()
 
-> **list**(`options?`, `requestOptions?`): `Promise`\<[`Author`](../interfaces/Author.md)[]\>
+> **list**(`options?`, `requestOptions?`): `Promise`\<[`AuthorWithPostCount`](../interfaces/AuthorWithPostCount.md)[]\>
 
-Defined in: [src/modules/authors.ts:13](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/authors.ts#L13)
+Defined in: [src/modules/authors.ts:34](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/authors.ts#L34)
 
 #### Parameters
 
@@ -52,4 +61,4 @@ Defined in: [src/modules/authors.ts:13](https://github.com/oyzamil/blogr/blob/1c
 
 #### Returns
 
-`Promise`\<[`Author`](../interfaces/Author.md)[]\>
+`Promise`\<[`AuthorWithPostCount`](../interfaces/AuthorWithPostCount.md)[]\>

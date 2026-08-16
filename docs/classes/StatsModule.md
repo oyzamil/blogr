@@ -2,11 +2,11 @@
 
 ***
 
-[blogr](../globals.md) / StatsModule
+[blogr](../README.md) / StatsModule
 
 # Class: StatsModule
 
-Defined in: [src/modules/stats.ts:12](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/stats.ts#L12)
+Defined in: [src/modules/stats.ts:14](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/stats.ts#L14)
 
 Cheap aggregate counts for the blog (posts/pages/comments/labels totals).
 
@@ -16,7 +16,7 @@ Cheap aggregate counts for the blog (posts/pages/comments/labels totals).
 
 > **new StatsModule**(`client`): `StatsModule`
 
-Defined in: [src/modules/stats.ts:13](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/stats.ts#L13)
+Defined in: [src/modules/stats.ts:15](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/stats.ts#L15)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/stats.ts:13](https://github.com/oyzamil/blogr/blob/1c6c
 
 > **get**(`requestOptions?`): `Promise`\<[`BlogStats`](../interfaces/BlogStats.md)\>
 
-Defined in: [src/modules/stats.ts:15](https://github.com/oyzamil/blogr/blob/1c6cb2dad175a1dc9d674306d1fc362c093f80ba/src/modules/stats.ts#L15)
+Defined in: [src/modules/stats.ts:17](https://github.com/oyzamil/blogr/blob/a9e99998556ac063e208b9a035393cc72f8e2d30/src/modules/stats.ts#L17)
 
 #### Parameters
 
