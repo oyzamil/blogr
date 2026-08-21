@@ -1,4 +1,4 @@
-import type { Blogr } from "../blogger";
+import { type Blogr } from "../blogger";
 
 /** A plugin function, or an object exposing an `install` function (Vue-style). */
 export type BloggerPlugin =

@@ -275,8 +275,8 @@ function getPost(entry: unknown): Post | null {
 			author: getAuthors(getNested(entry, "author"))[0] ?? EMPTY_AUTHOR,
 			thumbnail,
 			thumbnailAlt,
-			summary: isString(summary) ? summary : null,
-			content: isString(content) ? content : null,
+			summary: isString(summary) ? summary.trim() : null,
+			content: isString(content) ? content.trim() : null,
 			comments: getPostComments(linkArray),
 			geo: getGeo(entry),
 		};

@@ -1,16 +1,15 @@
-import type { Client } from "../core/client";
-import type { Post } from "../types/feed";
-import type {
-	LatestOptions,
-	Pager,
-	PostsListOptions,
-	RandomOptions,
-	RequestOptions,
-} from "../types/options";
-
+import { type Client } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString, isArray } from "../core/utils";
+import { type Post } from "../types/feed";
+import {
+	type LatestOptions,
+	type Pager,
+	type PostsListOptions,
+	type RandomOptions,
+	type RequestOptions,
+} from "../types/options";
 
 function labelPathSegment(label: string | string[] | undefined): string {
 	if (!label) return "";
@@ -100,10 +99,7 @@ export class PostsModule {
 		const { count = 1, ...filters } =
 			typeof options === "number" ? { count: options } : options;
 
-		const countFeed = await this.list(
-			{ ...filters, limit: 0 },
-			requestOptions,
-		);
+		const countFeed = await this.list({ ...filters, limit: 0 }, requestOptions);
 		const total = countFeed.totalResults ?? 0;
 		if (total === 0) return [];
 

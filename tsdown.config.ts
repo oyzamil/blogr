@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import type { OutputOptions } from "rolldown";
+import { type OutputOptions } from "rolldown";
 import { defineConfig, type UserConfig } from "tsdown";
 
 const pkg = JSON.parse(
@@ -32,17 +32,58 @@ const shared: UserConfig = {
 	target: "es2020",
 };
 
+const MODULE_ENTRIES: Record<string, string> = {
+	posts: "src/modules/posts.ts",
+	pages: "src/modules/pages.ts",
+	comments: "src/modules/comments.ts",
+	labels: "src/modules/labels.ts",
+	search: "src/modules/search.ts",
+	authors: "src/modules/authors.ts",
+	stats: "src/modules/stats.ts",
+	images: "src/modules/images.ts",
+	archive: "src/modules/archive.ts",
+	feed: "src/modules/feed.ts",
+	url: "src/modules/url.ts",
+	client: "src/core/client.ts",
+};
+
 const packageBuild = (minify: boolean): UserConfig => ({
 	...shared,
 	entry: {
 		[pkg.name]: "src/index.ts",
+		// Separate per-module entries so `import { PostsModule } from
+		// "blogr/posts"` only pulls in posts + shared core — rolldown
+		// dedupes the shared core/http/cache/utils code all modules import
+		// into a common chunk instead of duplicating it, so a "posts"-only
+		// consumer never bundles comments/authors/etc.
+		...MODULE_ENTRIES,
 	},
 	format: ["esm", "cjs"],
 	dts: !minify,
 	clean: !minify,
 	minify,
 	outputOptions(options, format) {
-		return applyOutputOptions(options, format, true);
+		applyOutputOptions(options, format, true);
+
+		// Shared internal chunks (utils/pagination/query/etc — code two or
+		// more entries import) default to a content hash in the filename
+		// (e.g. `utils-CK9HTX3r.esm.js`), which changes every build and is
+		// awkward to reference. Give them stable names instead, under
+		// `internal/` so a chunk can never collide with a real, importable
+		// per-module entry file living at the top of `dist/` (e.g. the
+		// standalone `client.esm.js` entry vs. an internal chunk that
+		// happens to also be named "client").
+		const ext =
+			format === "es"
+				? minify
+					? "esm.min.js"
+					: "esm.js"
+				: minify
+					? "min.cjs"
+					: "cjs";
+		options.chunkFileNames = `internal/[name].${ext}`;
+
+		return options;
 	},
 	outExtensions({ format }) {
 		return {
@@ -82,9 +123,40 @@ const browserBuild = (minify: boolean): UserConfig => ({
 	},
 });
 
+// Standalone per-module CDN builds — `<script src=".../posts.min.js">` alone
+// (no main bundle) merges onto a shared `window.Blogr` namespace (`Blogr.posts`,
+// `Blogr.client`, ...) instead of assigning its own separate global, so
+// `new Blogr.client(url)` / `new Blogr.posts(client)` works regardless of
+// which module scripts you actually included. Each entry file does the
+// `Object.assign` itself (see src/browser/<name>.ts), so there's no default
+// export here — `globalName` still has to be set for rolldown's iife format,
+// but nothing reads it; the entry's own side effect is what matters.
+const moduleBrowserBuild = (name: string, minify: boolean): UserConfig => ({
+	...shared,
+	entry: {
+		[name]: `src/browser/${name}.ts`,
+	},
+	format: ["iife"],
+	globalName: `__blogr_${name}_unused`,
+	dts: false,
+	clean: false,
+	minify,
+	outputOptions(options, format) {
+		applyOutputOptions(options, format, false);
+
+		options.entryFileNames = minify ? "[name].min.js" : "[name].js";
+
+		return options;
+	},
+});
+
 export default defineConfig([
 	packageBuild(false),
 	packageBuild(true),
 	browserBuild(false),
 	browserBuild(true),
+	...Object.keys(MODULE_ENTRIES).flatMap((name) => [
+		moduleBrowserBuild(name, false),
+		moduleBrowserBuild(name, true),
+	]),
 ]);

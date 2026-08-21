@@ -1,8 +1,11 @@
-import type { Post } from "../types/feed";
-import type { Pager, RequestOptions, SearchOptions } from "../types/options";
-import type { PostsModule } from "./posts";
-
 import { assertNonBlankString, isString } from "../core/utils";
+import { type Post } from "../types/feed";
+import {
+	type Pager,
+	type RequestOptions,
+	type SearchOptions,
+} from "../types/options";
+import { type PostsModule } from "./posts";
 
 /** Full-text search across posts. */
 export class SearchModule {

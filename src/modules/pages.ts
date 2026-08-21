@@ -1,10 +1,13 @@
-import type { Client } from "../core/client";
-import type { Post } from "../types/feed";
-import type { Pager, PagesListOptions, RequestOptions } from "../types/options";
-
+import { type Client } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString } from "../core/utils";
+import { type Post } from "../types/feed";
+import {
+	type Pager,
+	type PagesListOptions,
+	type RequestOptions,
+} from "../types/options";
 
 /** Methods for listing and fetching static blog pages. */
 export class PagesModule {

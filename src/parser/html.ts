@@ -1,4 +1,4 @@
-import type { Post } from "../types/feed";
+import { type Post } from "../types/feed";
 
 function resolveHtml(input: Post | string | null | undefined): string {
 	if (input === null || input === undefined) return "";

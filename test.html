@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./dist/client.min.js"></script>
+    <script src="./dist/authors.min.js"></script>
+
+    <script>
+        const client = new Blogr.client("https://softwebtuts.blogspot.com", { jsonp: true });
+        const posts = new Blogr.authors(client);
+
+        posts.then((result) => {
+            console.log(result);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

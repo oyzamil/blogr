@@ -1,6 +1,6 @@
-import type { ParsedFeed } from "../types/feed";
-import type { Pager, RequestOptions } from "../types/options";
-import type { Client } from "./client";
+import { type ParsedFeed } from "../types/feed";
+import { type Pager, type RequestOptions } from "../types/options";
+import { type Client } from "./client";
 
 /** Builds a {@link Pager} for `items` out of a parsed feed's pagination fields. */
 export function paginate<T>(

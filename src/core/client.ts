@@ -1,6 +1,5 @@
-import type { ParsedFeed } from "../types/feed";
-
 import { parseFeed } from "../parser/feed-parser";
+import { type ParsedFeed } from "../types/feed";
 import { Cache } from "./cache";
 import { BloggerValidationError } from "./errors";
 import { EventEmitter } from "./events";

@@ -1,6 +1,6 @@
 {
 	"name": "blogr",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "A modern, modular, fully-typed SDK for the Blogger (Blogspot) public feed API.",
 	"keywords": [
 		"blogger",
@@ -30,6 +30,126 @@
 			"require": {
 				"types": "./dist/blogr.d.cts",
 				"default": "./dist/blogr.cjs"
+			}
+		},
+		"./posts": {
+			"import": {
+				"types": "./dist/posts.d.ts",
+				"default": "./dist/posts.esm.js"
+			},
+			"require": {
+				"types": "./dist/posts.d.cts",
+				"default": "./dist/posts.cjs"
+			}
+		},
+		"./pages": {
+			"import": {
+				"types": "./dist/pages.d.ts",
+				"default": "./dist/pages.esm.js"
+			},
+			"require": {
+				"types": "./dist/pages.d.cts",
+				"default": "./dist/pages.cjs"
+			}
+		},
+		"./comments": {
+			"import": {
+				"types": "./dist/comments.d.ts",
+				"default": "./dist/comments.esm.js"
+			},
+			"require": {
+				"types": "./dist/comments.d.cts",
+				"default": "./dist/comments.cjs"
+			}
+		},
+		"./labels": {
+			"import": {
+				"types": "./dist/labels.d.ts",
+				"default": "./dist/labels.esm.js"
+			},
+			"require": {
+				"types": "./dist/labels.d.cts",
+				"default": "./dist/labels.cjs"
+			}
+		},
+		"./search": {
+			"import": {
+				"types": "./dist/search.d.ts",
+				"default": "./dist/search.esm.js"
+			},
+			"require": {
+				"types": "./dist/search.d.cts",
+				"default": "./dist/search.cjs"
+			}
+		},
+		"./authors": {
+			"import": {
+				"types": "./dist/authors.d.ts",
+				"default": "./dist/authors.esm.js"
+			},
+			"require": {
+				"types": "./dist/authors.d.cts",
+				"default": "./dist/authors.cjs"
+			}
+		},
+		"./stats": {
+			"import": {
+				"types": "./dist/stats.d.ts",
+				"default": "./dist/stats.esm.js"
+			},
+			"require": {
+				"types": "./dist/stats.d.cts",
+				"default": "./dist/stats.cjs"
+			}
+		},
+		"./images": {
+			"import": {
+				"types": "./dist/images.d.ts",
+				"default": "./dist/images.esm.js"
+			},
+			"require": {
+				"types": "./dist/images.d.cts",
+				"default": "./dist/images.cjs"
+			}
+		},
+		"./archive": {
+			"import": {
+				"types": "./dist/archive.d.ts",
+				"default": "./dist/archive.esm.js"
+			},
+			"require": {
+				"types": "./dist/archive.d.cts",
+				"default": "./dist/archive.cjs"
+			}
+		},
+		"./feed": {
+			"import": {
+				"types": "./dist/feed.d.ts",
+				"default": "./dist/feed.esm.js"
+			},
+			"require": {
+				"types": "./dist/feed.d.cts",
+				"default": "./dist/feed.cjs"
+			}
+		},
+		"./url": {
+			"import": {
+				"types": "./dist/url.d.ts",
+				"default": "./dist/url.esm.js"
+			},
+			"require": {
+				"types": "./dist/url.d.cts",
+				"default": "./dist/url.cjs"
+			}
+		},
+		"./client": {
+			"import": {
+				"types": "./dist/client.d.ts",
+				"default": "./dist/client.esm.js"
+			},
+			"require": {
+				"types": "./dist/client.d.cts",
+				"default": "./dist/client.cjs"
 			}
 		},
 		"./package.json": "./package.json"

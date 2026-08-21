@@ -1,8 +1,7 @@
-import type { Client } from "../core/client";
-import type { ParsedFeed } from "../types/feed";
-import type { BaseListOptions, RequestOptions } from "../types/options";
-
+import { type Client } from "../core/client";
 import { toQueryOptions } from "../core/query";
+import { type ParsedFeed } from "../types/feed";
+import { type BaseListOptions, type RequestOptions } from "../types/options";
 
 export interface FeedOptions extends BaseListOptions {
 	/** Which feed to fetch. @default "posts" */

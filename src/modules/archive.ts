@@ -1,6 +1,6 @@
-import type { Post } from "../types/feed";
-import type { Pager, RequestOptions } from "../types/options";
-import type { PostsModule } from "./posts";
+import { type Post } from "../types/feed";
+import { type Pager, type RequestOptions } from "../types/options";
+import { type PostsModule } from "./posts";
 
 function yearRange(year: number): [Date, Date] {
 	return [new Date(Date.UTC(year, 0, 1)), new Date(Date.UTC(year + 1, 0, 1))];
