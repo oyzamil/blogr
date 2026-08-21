@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { assertNonBlankString } from "../core/utils";
 import { type Post } from "../types/feed";
 import {
@@ -6,7 +6,7 @@ import {
 	type PostsListOptions,
 	type RequestOptions,
 } from "../types/options";
-import { type PostsModule } from "./posts";
+import { PostsModule } from "./posts";
 
 /** A label plus how many of the scanned posts carry it. */
 export interface LabelWithPostCount {
@@ -80,3 +80,15 @@ export class LabelsModule {
 		return this.posts.list({ ...options, label }, requestOptions);
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link LabelsModule} for this client. */
+		readonly labels: LabelsModule;
+	}
+}
+
+registerClientModule<LabelsModule>(
+	"labels",
+	(client) => new LabelsModule(client, new PostsModule(client)),
+);

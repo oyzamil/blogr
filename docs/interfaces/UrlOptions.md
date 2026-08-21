@@ -6,7 +6,7 @@
 
 # Interface: UrlOptions
 
-Defined in: [src/modules/url.ts:5](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L5)
+Defined in: [src/modules/url.ts:5](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/url.ts#L5)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/modules/url.ts:5](https://github.com/oyzamil/blogr/blob/845af3c
 
 > `optional` **format?**: [`FeedFormat`](../type-aliases/FeedFormat.md)
 
-Defined in: [src/modules/url.ts:7](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/url.ts#L7)
+Defined in: [src/modules/url.ts:7](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/url.ts#L7)
 
 #### Default
 

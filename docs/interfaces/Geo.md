@@ -6,7 +6,7 @@
 
 # Interface: Geo
 
-Defined in: [src/types/feed.ts:36](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L36)
+Defined in: [src/types/feed.ts:36](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L36)
 
 Geo-location info attached to a post, if any.
 
@@ -16,7 +16,7 @@ Geo-location info attached to a post, if any.
 
 > **box**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:37](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L37)
+Defined in: [src/types/feed.ts:37](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L37)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types/feed.ts:37](https://github.com/oyzamil/blogr/blob/845af3c
 
 > **featureName**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:38](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L38)
+Defined in: [src/types/feed.ts:38](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L38)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [src/types/feed.ts:38](https://github.com/oyzamil/blogr/blob/845af3c
 
 > **point**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:39](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/feed.ts#L39)
+Defined in: [src/types/feed.ts:39](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L39)

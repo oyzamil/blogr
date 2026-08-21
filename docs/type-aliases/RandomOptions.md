@@ -8,7 +8,7 @@
 
 > **RandomOptions** = `number` \| `Omit`\<[`PostsListOptions`](../interfaces/PostsListOptions.md), `"limit"` \| `"startIndex"`\> & `object`
 
-Defined in: [src/types/options.ts:67](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L67)
+Defined in: [src/types/options.ts:67](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L67)
 
 Options for [PostsModule.random](../classes/PostsModule.md#random). A bare
 `number` is shorthand for `{ count: number }`; pass an object instead to

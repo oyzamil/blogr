@@ -1,6 +1,7 @@
+import { registerClientModule } from "../core/client";
 import { type Author } from "../types/feed";
 import { type RequestOptions } from "../types/options";
-import { type PostsModule } from "./posts";
+import { PostsModule } from "./posts";
 
 /** An {@link Author} plus stats derived from the scanned posts. */
 export interface AuthorWithPostCount extends Author {
@@ -101,3 +102,15 @@ export class AuthorsModule {
 		}));
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link AuthorsModule} for this client. */
+		readonly authors: AuthorsModule;
+	}
+}
+
+registerClientModule<AuthorsModule>(
+	"authors",
+	(client) => new AuthorsModule(new PostsModule(client)),
+);

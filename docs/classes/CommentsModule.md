@@ -6,7 +6,7 @@
 
 # Class: CommentsModule
 
-Defined in: [src/modules/comments.ts:18](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/comments.ts#L18)
+Defined in: [src/modules/comments.ts:18](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/comments.ts#L18)
 
 Methods for listing and fetching comments.
 
@@ -16,7 +16,7 @@ Methods for listing and fetching comments.
 
 > **new CommentsModule**(`client`): `CommentsModule`
 
-Defined in: [src/modules/comments.ts:19](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/comments.ts#L19)
+Defined in: [src/modules/comments.ts:19](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/comments.ts#L19)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/comments.ts:19](https://github.com/oyzamil/blogr/blob/8
 
 > **commenters**(`options?`, `requestOptions?`): `Promise`\<[`CommenterWithCount`](../interfaces/CommenterWithCount.md)[]\>
 
-Defined in: [src/modules/comments.ts:103](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/comments.ts#L103)
+Defined in: [src/modules/comments.ts:103](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/comments.ts#L103)
 
 Lists distinct commenters, each with their comment count.
 
@@ -70,7 +70,7 @@ instead. Pass `postId` to scope to one post's commenters.
 
 > **get**(`commentId`, `postId?`, `options?`, `requestOptions?`): `Promise`\<[`Comment`](../interfaces/Comment.md) \| `null`\>
 
-Defined in: [src/modules/comments.ts:52](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/comments.ts#L52)
+Defined in: [src/modules/comments.ts:52](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/comments.ts#L52)
 
 Fetches a single comment by id.
 
@@ -113,7 +113,7 @@ lookup — prefer passing `postId` when you have it.
 
 > **list**(`options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Comment`](../interfaces/Comment.md)\>\>
 
-Defined in: [src/modules/comments.ts:22](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/comments.ts#L22)
+Defined in: [src/modules/comments.ts:22](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/comments.ts#L22)
 
 Lists comments for the whole blog, or for a single post when `options.postId` is set.
 

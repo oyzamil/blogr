@@ -6,7 +6,7 @@
 
 # Class: SearchModule
 
-Defined in: [src/modules/search.ts:8](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/search.ts#L8)
+Defined in: [src/modules/search.ts:12](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/search.ts#L12)
 
 Full-text search across posts.
 
@@ -16,7 +16,7 @@ Full-text search across posts.
 
 > **new SearchModule**(`posts`): `SearchModule`
 
-Defined in: [src/modules/search.ts:9](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/search.ts#L9)
+Defined in: [src/modules/search.ts:13](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/search.ts#L13)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/search.ts:9](https://github.com/oyzamil/blogr/blob/845a
 
 > **run**(`input`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/search.ts:12](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/search.ts#L12)
+Defined in: [src/modules/search.ts:16](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/search.ts#L16)
 
 Searches posts by a plain query string, or a [SearchOptions](../interfaces/SearchOptions.md) object.
 

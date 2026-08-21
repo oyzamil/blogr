@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString } from "../core/utils";
@@ -42,3 +42,12 @@ export class PagesModule {
 		return feed.posts?.find((p) => p.id === pageId) ?? feed.posts?.[0] ?? null;
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link PagesModule} for this client. */
+		readonly pages: PagesModule;
+	}
+}
+
+registerClientModule<PagesModule>("pages", (client) => new PagesModule(client));

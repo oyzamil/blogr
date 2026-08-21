@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString, isUndefined } from "../core/utils";
@@ -135,3 +135,15 @@ export class CommentsModule {
 		}));
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link CommentsModule} for this client. */
+		readonly comments: CommentsModule;
+	}
+}
+
+registerClientModule<CommentsModule>(
+	"comments",
+	(client) => new CommentsModule(client),
+);

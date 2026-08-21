@@ -6,7 +6,7 @@
 
 # Interface: Pager\<T\>
 
-Defined in: [src/types/options.ts:87](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L87)
+Defined in: [src/types/options.ts:87](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L87)
 
 Result of any listing call — a page of items plus pagination helpers.
 
@@ -22,7 +22,7 @@ Result of any listing call — a page of items plus pagination helpers.
 
 > `readonly` **hasNext**: `boolean`
 
-Defined in: [src/types/options.ts:99](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L99)
+Defined in: [src/types/options.ts:99](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L99)
 
 Whether a [Pager.next](#next) page is available.
 
@@ -32,7 +32,7 @@ Whether a [Pager.next](#next) page is available.
 
 > `readonly` **hasPrevious**: `boolean`
 
-Defined in: [src/types/options.ts:101](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L101)
+Defined in: [src/types/options.ts:101](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L101)
 
 Whether a [Pager.previous](#previous) page is available.
 
@@ -42,7 +42,7 @@ Whether a [Pager.previous](#previous) page is available.
 
 > `readonly` **items**: `T`[]
 
-Defined in: [src/types/options.ts:89](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L89)
+Defined in: [src/types/options.ts:89](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L89)
 
 Items on the current page.
 
@@ -52,7 +52,7 @@ Items on the current page.
 
 > `readonly` **itemsPerPage**: `number` \| `null`
 
-Defined in: [src/types/options.ts:91](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L91)
+Defined in: [src/types/options.ts:91](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L91)
 
 Items requested per page (mirrors `limit`), or `null`.
 
@@ -62,7 +62,7 @@ Items requested per page (mirrors `limit`), or `null`.
 
 > `readonly` **selfUrl**: `string` \| `null`
 
-Defined in: [src/types/options.ts:97](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L97)
+Defined in: [src/types/options.ts:97](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L97)
 
 URL of the current page's feed request.
 
@@ -72,7 +72,7 @@ URL of the current page's feed request.
 
 > `readonly` **startIndex**: `number` \| `null`
 
-Defined in: [src/types/options.ts:93](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L93)
+Defined in: [src/types/options.ts:93](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L93)
 
 1-based index of the first item on this page, or `null`.
 
@@ -82,7 +82,7 @@ Defined in: [src/types/options.ts:93](https://github.com/oyzamil/blogr/blob/845a
 
 > `readonly` **totalResults**: `number` \| `null`
 
-Defined in: [src/types/options.ts:95](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L95)
+Defined in: [src/types/options.ts:95](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L95)
 
 Total number of items available across all pages, or `null`.
 
@@ -92,7 +92,7 @@ Total number of items available across all pages, or `null`.
 
 > **next**(`options?`): `Promise`\<`Pager`\<`T`\> \| `null`\>
 
-Defined in: [src/types/options.ts:103](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L103)
+Defined in: [src/types/options.ts:103](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L103)
 
 Fetches the next page, or `null` if there isn't one.
 
@@ -112,7 +112,7 @@ Fetches the next page, or `null` if there isn't one.
 
 > **previous**(`options?`): `Promise`\<`Pager`\<`T`\> \| `null`\>
 
-Defined in: [src/types/options.ts:105](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L105)
+Defined in: [src/types/options.ts:105](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L105)
 
 Fetches the previous page, or `null` if there isn't one.
 

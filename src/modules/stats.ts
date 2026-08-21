@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { type RequestOptions } from "../types/options";
 
 export interface BlogStats {
@@ -41,3 +41,12 @@ export class StatsModule {
 		};
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link StatsModule} for this client. */
+		readonly stats: StatsModule;
+	}
+}
+
+registerClientModule<StatsModule>("stats", (client) => new StatsModule(client));

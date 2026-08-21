@@ -6,7 +6,7 @@
 
 # Class: LabelsModule
 
-Defined in: [src/modules/labels.ts:18](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/labels.ts#L18)
+Defined in: [src/modules/labels.ts:18](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/labels.ts#L18)
 
 Methods for discovering and filtering by labels (Blogger's "categories").
 
@@ -16,7 +16,7 @@ Methods for discovering and filtering by labels (Blogger's "categories").
 
 > **new LabelsModule**(`client`, `posts`): `LabelsModule`
 
-Defined in: [src/modules/labels.ts:19](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/labels.ts#L19)
+Defined in: [src/modules/labels.ts:19](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/labels.ts#L19)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/modules/labels.ts:19](https://github.com/oyzamil/blogr/blob/845
 
 > **counts**(`options?`, `requestOptions?`): `Promise`\<[`LabelWithPostCount`](../interfaces/LabelWithPostCount.md)[]\>
 
-Defined in: [src/modules/labels.ts:42](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/labels.ts#L42)
+Defined in: [src/modules/labels.ts:42](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/labels.ts#L42)
 
 Returns every label with a post count.
 
@@ -70,7 +70,7 @@ request of that many most-recent posts instead.
 
 > **get**(`label`, `options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/labels.ts:74](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/labels.ts#L74)
+Defined in: [src/modules/labels.ts:74](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/labels.ts#L74)
 
 Lists posts carrying `label`.
 
@@ -98,7 +98,7 @@ Lists posts carrying `label`.
 
 > **list**(`requestOptions?`): `Promise`\<`string`[]\>
 
-Defined in: [src/modules/labels.ts:25](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/labels.ts#L25)
+Defined in: [src/modules/labels.ts:25](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/labels.ts#L25)
 
 Returns every label currently known to the blog.
 

@@ -6,7 +6,7 @@
 
 # Class: ArchiveModule
 
-Defined in: [src/modules/archive.ts:22](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/archive.ts#L22)
+Defined in: [src/modules/archive.ts:23](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/archive.ts#L23)
 
 Year/month archive browsing. Blogger's public feed API has no dedicated
 archive endpoint, so this is built on top of `publishedMin`/`publishedMax`
@@ -18,7 +18,7 @@ range queries against the posts feed.
 
 > **new ArchiveModule**(`posts`): `ArchiveModule`
 
-Defined in: [src/modules/archive.ts:23](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/archive.ts#L23)
+Defined in: [src/modules/archive.ts:24](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/archive.ts#L24)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: [src/modules/archive.ts:23](https://github.com/oyzamil/blogr/blob/84
 
 > **month**(`year`, `month`, `options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/archive.ts:39](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/archive.ts#L39)
+Defined in: [src/modules/archive.ts:40](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/archive.ts#L40)
 
 Lists posts published in `month` (1-based) of `year`.
 
@@ -74,7 +74,7 @@ Lists posts published in `month` (1-based) of `year`.
 
 > **year**(`year`, `options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/archive.ts:26](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/archive.ts#L26)
+Defined in: [src/modules/archive.ts:27](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/archive.ts#L27)
 
 Lists posts published in `year`.
 
@@ -108,7 +108,7 @@ Lists posts published in `year`.
 
 > **years**(`requestOptions?`): `Promise`\<`number`[]\>
 
-Defined in: [src/modules/archive.ts:58](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/archive.ts#L58)
+Defined in: [src/modules/archive.ts:59](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/archive.ts#L59)
 
 Returns every year that has at least one post, newest first.
 

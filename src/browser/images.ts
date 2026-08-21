@@ -1,8 +1,6 @@
-// Standalone "images" CDN build. Loaded alone (no main script.js), this
-// merges onto a shared `window.Blogr` namespace instead of its own global,
-// so `<script src=".../images.min.js">` gives you `Blogr.images` —
-// `new Blogr.images(...)` — without pulling in any other module's code.
-import { ImagesModule } from "../modules/images";
-
-const g = globalThis as Record<string, unknown>;
-g.Blogr = Object.assign((g.Blogr as object) ?? {}, { images: ImagesModule });
+// Standalone "images" CDN build. Load after client.js — this only patches
+// the shared `Blogr` (== `Client`) prototype with a lazy `.images` accessor
+// (see modules/images.ts's `registerClientModule` call); it doesn't define
+// `window.Blogr` itself, so it throws (`__blogrCore is not defined`) if
+// loaded before client.js.
+import "../modules/images";

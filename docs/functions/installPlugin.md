@@ -8,7 +8,7 @@
 
 > **installPlugin**(`blog`, `plugin`): `void`
 
-Defined in: [src/plugins/index.ts:9](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/plugins/index.ts#L9)
+Defined in: [src/plugins/index.ts:9](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/plugins/index.ts#L9)
 
 Installs `plugin` onto `blog`.
 

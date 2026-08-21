@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { type FeedFormat } from "../core/http";
 import { assertNonBlankString } from "../core/utils";
 
@@ -73,3 +73,12 @@ export class UrlModule {
 			.toString();
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link UrlModule} for this client. */
+		readonly url: UrlModule;
+	}
+}
+
+registerClientModule<UrlModule>("url", (client) => new UrlModule(client));

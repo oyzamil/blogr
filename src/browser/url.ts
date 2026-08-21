@@ -1,8 +1,6 @@
-// Standalone "url" CDN build. Loaded alone (no main script.js), this
-// merges onto a shared `window.Blogr` namespace instead of its own global,
-// so `<script src=".../url.min.js">` gives you `Blogr.url` —
-// `new Blogr.url(...)` — without pulling in any other module's code.
-import { UrlModule } from "../modules/url";
-
-const g = globalThis as Record<string, unknown>;
-g.Blogr = Object.assign((g.Blogr as object) ?? {}, { url: UrlModule });
+// Standalone "url" CDN build. Load after client.js — this only patches
+// the shared `Blogr` (== `Client`) prototype with a lazy `.url` accessor
+// (see modules/url.ts's `registerClientModule` call); it doesn't define
+// `window.Blogr` itself, so it throws (`__blogrCore is not defined`) if
+// loaded before client.js.
+import "../modules/url";

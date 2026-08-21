@@ -123,14 +123,16 @@ const browserBuild = (minify: boolean): UserConfig => ({
 	},
 });
 
-// Standalone per-module CDN builds — `<script src=".../posts.min.js">` alone
-// (no main bundle) merges onto a shared `window.Blogr` namespace (`Blogr.posts`,
-// `Blogr.client`, ...) instead of assigning its own separate global, so
-// `new Blogr.client(url)` / `new Blogr.posts(client)` works regardless of
-// which module scripts you actually included. Each entry file does the
-// `Object.assign` itself (see src/browser/<name>.ts), so there's no default
-// export here — `globalName` still has to be set for rolldown's iife format,
-// but nothing reads it; the entry's own side effect is what matters.
+const CLIENT_MODULE_RE = /[\\/]core[\\/]client(\.ts)?$/;
+
+// Standalone per-module CDN builds — `<script src=".../posts.min.js">`
+// alone (after client.js) patches the shared `Blogr` (== `Client`)
+// prototype with `.posts`, so `new Blogr(url)` from client.js gets `.posts`
+// too. Every one of these except client.js itself treats `../core/client`
+// as external, resolved at runtime via the `window.Blogr` global client.js
+// already set up — otherwise each standalone bundle would carry its own,
+// separately-identitied copy of `Client`, and the prototype patch would
+// land on the wrong object (see src/browser/client.ts).
 const moduleBrowserBuild = (name: string, minify: boolean): UserConfig => ({
 	...shared,
 	entry: {
@@ -138,6 +140,7 @@ const moduleBrowserBuild = (name: string, minify: boolean): UserConfig => ({
 	},
 	format: ["iife"],
 	globalName: `__blogr_${name}_unused`,
+	external: name === "client" ? undefined : [CLIENT_MODULE_RE],
 	dts: false,
 	clean: false,
 	minify,
@@ -145,6 +148,10 @@ const moduleBrowserBuild = (name: string, minify: boolean): UserConfig => ({
 		applyOutputOptions(options, format, false);
 
 		options.entryFileNames = minify ? "[name].min.js" : "[name].js";
+		if (name !== "client") {
+			options.globals = (id: string) =>
+				CLIENT_MODULE_RE.test(id) ? "__blogrCore" : "";
+		}
 
 		return options;
 	},

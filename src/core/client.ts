@@ -13,6 +13,38 @@ import {
 } from "./http";
 import { isString, trailingSlash } from "./utils";
 
+const MODULE_CACHE = Symbol("blogr.modules");
+
+/**
+ * Adds a lazily-created, memoized accessor to `Client.prototype` — used by
+ * each `modules/*.ts` file to attach itself (e.g. `client.posts`) as a side
+ * effect of being imported, instead of `Client` statically importing every
+ * module up front. Importing `blogr/posts` alone gets you `client.posts`;
+ * importing `blogr` (or `blogr/authors`, etc.) gets you more, but nothing
+ * you didn't ask for ends up in your bundle.
+ *
+ * Pair with a `declare module "./client"` interface merge in the calling
+ * file so the new property is actually typed, not just present at runtime.
+ */
+export function registerClientModule<T>(
+	name: string,
+	factory: (client: Client) => T,
+): void {
+	Object.defineProperty(Client.prototype, name, {
+		configurable: true,
+		enumerable: true,
+		get(this: Client): T {
+			// biome-ignore lint/suspicious/noAssignInExpressions: Expected
+			const cache = ((
+				this as unknown as Record<symbol, Record<string, unknown>>
+			)[MODULE_CACHE] ??= {});
+
+			// biome-ignore lint/suspicious/noAssignInExpressions: Expected
+			return (cache[name] ??= factory(this)) as T;
+		},
+	});
+}
+
 export interface ClientOptions {
 	/** Enable JSONP transport (browser-only). @default false */
 	jsonp?: boolean;

@@ -6,7 +6,7 @@
 
 # Interface: FeedOptions
 
-Defined in: [src/modules/feed.ts:7](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/feed.ts#L7)
+Defined in: [src/modules/feed.ts:6](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/feed.ts#L6)
 
 Fields shared between posts/pages/comments listing options.
 
@@ -20,7 +20,7 @@ Fields shared between posts/pages/comments listing options.
 
 > `optional` **limit?**: `number` \| `null`
 
-Defined in: [src/types/options.ts:22](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L22)
+Defined in: [src/types/options.ts:22](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L22)
 
 Alias for Blogger's `max-results`.
 
@@ -40,7 +40,7 @@ then applies its own default page size).
 
 > `optional` **orderBy?**: `"updated"` \| `"published"`
 
-Defined in: [src/types/options.ts:26](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L26)
+Defined in: [src/types/options.ts:26](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L26)
 
 Sort field.
 
@@ -54,7 +54,7 @@ Sort field.
 
 > `optional` **page?**: `number`
 
-Defined in: [src/types/options.ts:16](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L16)
+Defined in: [src/types/options.ts:16](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L16)
 
 Page number (1-based). Converted internally to `startIndex` using
 `limit`. Ignored if `startIndex` is also provided.
@@ -69,7 +69,7 @@ Page number (1-based). Converted internally to `startIndex` using
 
 > `optional` **publishedMax?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:30](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L30)
+Defined in: [src/types/options.ts:30](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L30)
 
 Only include entries published on/before this date.
 
@@ -83,7 +83,7 @@ Only include entries published on/before this date.
 
 > `optional` **publishedMin?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:28](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L28)
+Defined in: [src/types/options.ts:28](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L28)
 
 Only include entries published on/after this date.
 
@@ -97,7 +97,7 @@ Only include entries published on/after this date.
 
 > `optional` **startIndex?**: `number`
 
-Defined in: [src/types/options.ts:24](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L24)
+Defined in: [src/types/options.ts:24](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L24)
 
 Raw 1-based start index, takes precedence over `page`.
 
@@ -111,7 +111,7 @@ Raw 1-based start index, takes precedence over `page`.
 
 > `optional` **summary?**: `boolean`
 
-Defined in: [src/types/options.ts:36](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L36)
+Defined in: [src/types/options.ts:36](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L36)
 
 When `true`, requests the lightweight "summary" projection.
 
@@ -125,7 +125,7 @@ When `true`, requests the lightweight "summary" projection.
 
 > `optional` **type?**: `"posts"` \| `"comments"` \| `"pages"`
 
-Defined in: [src/modules/feed.ts:9](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/feed.ts#L9)
+Defined in: [src/modules/feed.ts:8](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/feed.ts#L8)
 
 Which feed to fetch.
 
@@ -141,7 +141,7 @@ Which feed to fetch.
 
 > `optional` **updatedMax?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:34](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L34)
+Defined in: [src/types/options.ts:34](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L34)
 
 Only include entries updated on/before this date.
 
@@ -155,7 +155,7 @@ Only include entries updated on/before this date.
 
 > `optional` **updatedMin?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:32](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/types/options.ts#L32)
+Defined in: [src/types/options.ts:32](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L32)
 
 Only include entries updated on/after this date.
 

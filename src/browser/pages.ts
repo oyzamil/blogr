@@ -1,8 +1,6 @@
-// Standalone "pages" CDN build. Loaded alone (no main script.js), this
-// merges onto a shared `window.Blogr` namespace instead of its own global,
-// so `<script src=".../pages.min.js">` gives you `Blogr.pages` —
-// `new Blogr.pages(...)` — without pulling in any other module's code.
-import { PagesModule } from "../modules/pages";
-
-const g = globalThis as Record<string, unknown>;
-g.Blogr = Object.assign((g.Blogr as object) ?? {}, { pages: PagesModule });
+// Standalone "pages" CDN build. Load after client.js — this only patches
+// the shared `Blogr` (== `Client`) prototype with a lazy `.pages` accessor
+// (see modules/pages.ts's `registerClientModule` call); it doesn't define
+// `window.Blogr` itself, so it throws (`__blogrCore is not defined`) if
+// loaded before client.js.
+import "../modules/pages";

@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { paginate } from "../core/pagination";
 import { toQueryOptions } from "../core/query";
 import { assertNonBlankString, isArray } from "../core/utils";
@@ -122,3 +122,12 @@ export class PostsModule {
 		return results.filter((p): p is Post => Boolean(p));
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link PostsModule} for this client. */
+		readonly posts: PostsModule;
+	}
+}
+
+registerClientModule<PostsModule>("posts", (client) => new PostsModule(client));

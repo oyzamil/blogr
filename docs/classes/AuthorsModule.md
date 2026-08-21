@@ -6,7 +6,7 @@
 
 # Class: AuthorsModule
 
-Defined in: [src/modules/authors.ts:31](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/authors.ts#L31)
+Defined in: [src/modules/authors.ts:32](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/authors.ts#L32)
 
 Lists distinct post authors, each with post count and stats derived from
 their posts.
@@ -27,7 +27,7 @@ most-recent posts.
 
 > **new AuthorsModule**(`posts`): `AuthorsModule`
 
-Defined in: [src/modules/authors.ts:32](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/authors.ts#L32)
+Defined in: [src/modules/authors.ts:33](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/authors.ts#L33)
 
 #### Parameters
 
@@ -45,7 +45,7 @@ Defined in: [src/modules/authors.ts:32](https://github.com/oyzamil/blogr/blob/84
 
 > **list**(`options?`, `requestOptions?`): `Promise`\<[`AuthorWithPostCount`](../interfaces/AuthorWithPostCount.md)[]\>
 
-Defined in: [src/modules/authors.ts:34](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/modules/authors.ts#L34)
+Defined in: [src/modules/authors.ts:35](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/authors.ts#L35)
 
 #### Parameters
 

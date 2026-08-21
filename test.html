@@ -5,16 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./dist/client.min.js"></script>
-    <script src="./dist/authors.min.js"></script>
-
+    <script src="./dist/blogr.min.js"></script>
     <script>
-        const client = new Blogr.client("https://softwebtuts.blogspot.com", { jsonp: true });
-        const posts = new Blogr.authors(client);
+        (async () => {
+            const blog = new Blogr("https://softwebtuts.blogspot.com");
 
-        posts.then((result) => {
-            console.log(result);
-        });
+            const info = await blog.info();
+            console.log(info.title, info.subtitle);
+
+
+            const { items: recent } = await blog.posts({ limit: 5, orderBy: "published" });
+
+            const jsPosts = await blog.label("JavaScript", { limit: 10 });
+
+            const results = await blog.search("typescript tips");
+
+            const stats = await blog.stats();
+            console.log(`${stats.posts} posts, ${stats.comments} comments`);
+
+            const authors = await blog.authors({ sampleSize: 100 });
+
+            blog.cache.enable({ ttlMs: 30_000 });
+            blog.on("request", ({ url }) => console.log("→", url));
+            blog.on("error", ({ url, error }) => console.error("blogr error:", url, error));
+
+            try {
+                const missing = await blog.post("0000000000000000000");
+                console.log(missing); // null, no throw for valid-but-nonexistent id
+            } catch (err) {
+                // no BloggerRequestError export in iife build — check by name/status instead
+                if (err && err.name === "BloggerRequestError") {
+                    console.error("network/http failure:", err.status, err.url);
+                }
+            }
+
+            blog.use(b => {
+                b.on("response", ({ url, status, durationMs }) => {
+                    if (durationMs > 1000) console.warn(`slow request: ${url} took ${durationMs}ms (${status})`);
+                });
+            });
+        })();
     </script>
 </head>
 

@@ -1,4 +1,4 @@
-import { type Client } from "../core/client";
+import { type Client, registerClientModule } from "../core/client";
 import { toQueryOptions } from "../core/query";
 import { type ParsedFeed } from "../types/feed";
 import { type BaseListOptions, type RequestOptions } from "../types/options";
@@ -63,3 +63,12 @@ export class FeedModule {
 		});
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link FeedModule} for this client. */
+		readonly feed: FeedModule;
+	}
+}
+
+registerClientModule<FeedModule>("feed", (client) => new FeedModule(client));

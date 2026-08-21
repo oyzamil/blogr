@@ -1,6 +1,7 @@
+import { registerClientModule } from "../core/client";
 import { extractImages } from "../parser/html";
 import { type RequestOptions } from "../types/options";
-import { type PostsModule } from "./posts";
+import { PostsModule } from "./posts";
 
 /** One image found while scanning posts. */
 export interface FoundImage {
@@ -56,3 +57,15 @@ export class ImagesModule {
 		return found;
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link ImagesModule} for this client. */
+		readonly images: ImagesModule;
+	}
+}
+
+registerClientModule<ImagesModule>(
+	"images",
+	(client) => new ImagesModule(new PostsModule(client)),
+);

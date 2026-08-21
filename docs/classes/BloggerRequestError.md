@@ -6,7 +6,7 @@
 
 # Class: BloggerRequestError
 
-Defined in: [src/core/errors.ts:10](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/errors.ts#L10)
+Defined in: [src/core/errors.ts:10](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/errors.ts#L10)
 
 Thrown when a network/HTTP request fails or returns a non-2xx status.
 
@@ -20,7 +20,7 @@ Thrown when a network/HTTP request fails or returns a non-2xx status.
 
 > **new BloggerRequestError**(`message`, `url`, `status?`, `options?`): `BloggerRequestError`
 
-Defined in: [src/core/errors.ts:14](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/errors.ts#L14)
+Defined in: [src/core/errors.ts:14](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/errors.ts#L14)
 
 #### Parameters
 
@@ -102,7 +102,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > `readonly` **status**: `number` \| `null`
 
-Defined in: [src/core/errors.ts:12](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/errors.ts#L12)
+Defined in: [src/core/errors.ts:12](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/errors.ts#L12)
 
 ***
 
@@ -110,4 +110,4 @@ Defined in: [src/core/errors.ts:12](https://github.com/oyzamil/blogr/blob/845af3
 
 > `readonly` **url**: `string`
 
-Defined in: [src/core/errors.ts:11](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/core/errors.ts#L11)
+Defined in: [src/core/errors.ts:11](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/errors.ts#L11)

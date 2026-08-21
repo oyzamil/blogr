@@ -1,3 +1,4 @@
+import { registerClientModule } from "../core/client";
 import { assertNonBlankString, isString } from "../core/utils";
 import { type Post } from "../types/feed";
 import {
@@ -5,7 +6,7 @@ import {
 	type RequestOptions,
 	type SearchOptions,
 } from "../types/options";
-import { type PostsModule } from "./posts";
+import { PostsModule } from "./posts";
 
 /** Full-text search across posts. */
 export class SearchModule {
@@ -36,3 +37,15 @@ export class SearchModule {
 		);
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link SearchModule} for this client. */
+		readonly search: SearchModule;
+	}
+}
+
+registerClientModule<SearchModule>(
+	"search",
+	(client) => new SearchModule(new PostsModule(client)),
+);

@@ -1,6 +1,7 @@
+import { registerClientModule } from "../core/client";
 import { type Post } from "../types/feed";
 import { type Pager, type RequestOptions } from "../types/options";
-import { type PostsModule } from "./posts";
+import { PostsModule } from "./posts";
 
 function yearRange(year: number): [Date, Date] {
 	return [new Date(Date.UTC(year, 0, 1)), new Date(Date.UTC(year + 1, 0, 1))];
@@ -74,3 +75,15 @@ export class ArchiveModule {
 		return years;
 	}
 }
+
+declare module "../core/client" {
+	interface Client {
+		/** Lazily-created {@link ArchiveModule} for this client. */
+		readonly archive: ArchiveModule;
+	}
+}
+
+registerClientModule<ArchiveModule>(
+	"archive",
+	(client) => new ArchiveModule(new PostsModule(client)),
+);

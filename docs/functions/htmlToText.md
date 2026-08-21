@@ -8,7 +8,7 @@
 
 > **htmlToText**(`input`): `string`
 
-Defined in: [src/parser/html.ts:29](https://github.com/oyzamil/blogr/blob/845af3c2124b40a9da233e5b4826fdf18f840840/src/parser/html.ts#L29)
+Defined in: [src/parser/html.ts:29](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/parser/html.ts#L29)
 
 Strips HTML tags and decodes entities, collapsing whitespace into a plain-text string.
 
