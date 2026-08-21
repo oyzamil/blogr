@@ -1,20 +1,20 @@
 // Entry point for the full "everything" IIFE (global `Blogr`) CDN build.
-// `Blogr` is `Client` itself (see core/client.ts's `registerClientModule`)
-// — importing every module here for its registration side effect means a
-// `new Blogr(url)` from this one script already has every lazy accessor
-// (`.posts`, `.comments`, `.authors`, ...) wired up, memoized on first
-// access. No separate `Blogr.posts`/`Blogr.client` namespace needed.
-import { Client } from "./core/client";
-import "./modules/archive";
-import "./modules/authors";
-import "./modules/comments";
-import "./modules/feed";
-import "./modules/images";
-import "./modules/labels";
-import "./modules/pages";
-import "./modules/posts";
-import "./modules/search";
-import "./modules/stats";
-import "./modules/url";
+// `Blogr` here is the SAME public wrapper class shipped in blogr.esm.js /
+// blogr.cjs (see ./blogger.ts) — so `new Blogr(url)` from this one script
+// gets the exact same shortcut methods as npm users: `.info()`, `.posts()`,
+// `.stats()`, `.label()`, `.search()`, `.use()`, `.on()`/`.off()`,
+// `.request()`/`.fetch()`, the html helpers, the static factories
+// (`Blogr.connect()`, `.fromBlogId()`, `.fromUrl()`, `.fromFeed()`), etc.
+// One call style everywhere, npm or CDN.
+//
+// NOTE: this intentionally does NOT use the bare `Client` +
+// `registerClientModule` lazy-getter pattern anymore. That pattern still
+// powers the separate standalone per-module CDN scripts (client.js,
+// posts.js, comments.js, ...) built from src/browser/*.ts — those exist so
+// someone can load only `client.js` + `posts.js` and skip the rest. This
+// "everything" bundle has no reason to use that pattern since it already
+// includes every module, so it uses the same full-featured `Blogr` wrapper
+// as the npm build instead, for one consistent API surface.
+import { Blogr } from "./blogger";
 
-export { Client as default };
+export { Blogr as default };

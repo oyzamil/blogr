@@ -70,6 +70,23 @@ CDN (browser, IIFE global `Blogr`):
 </script>
 ```
 
+> **Fixed as of this build:** `blogr.js`/`blogr.min.js` now ship the exact same `Blogr` wrapper class as `blogr.esm.js`/`blogr.cjs` — one call style everywhere, npm or CDN. `new Blogr(url)` off the CDN global gets `.info()`, `.posts()`, `.stats()`, `.label()`, `.search()`, `.use()`, `.on()`/`.off()`, `.request()`/`.fetch()`, the html helpers, and the static factories `Blogr.connect()` / `.fromBlogId()` / `.fromUrl()` / `.fromFeed()` — identical to npm. Confirmed by rebuilding and sandbox-testing the bundle directly.
+>
+> Older `blogr.js` builds (pre-fix) shipped a bare internal `Client` instead, with a different module-getter call style (`blog.posts.list()` instead of `blog.posts()`) and missing `use()`/`request()`/`fetch()`/html helpers entirely. If you're on an older cached CDN file, re-pull `blogr.min.js` to get the fix.
+>
+> One thing that stays iife-only either way: top-level `await` isn't allowed in a plain `<script>` tag, so wrap usage in an async IIFE:
+>
+> ```html
+> <script src="https://cdn.jsdelivr.net/npm/blogr/dist/blogr.min.js"></script>
+> <script>
+> (async () => {
+>   const blog = await Blogr.connect("https://example.blogspot.com");
+>   const info = await blog.info();
+>   console.log(info.title, info.subtitle);
+> })();
+> </script>
+> ```
+
 ## Formats shipped in dist
 
 Per module (e.g. `blogr`, `posts`, `comments`...), four builds:
