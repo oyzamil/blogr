@@ -8,7 +8,7 @@
 
 > **htmlToMarkdown**(`input`): `string`
 
-Defined in: [src/parser/html.ts:51](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/parser/html.ts#L51)
+Defined in: [src/parser/html.ts:51](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/parser/html.ts#L51)
 
 Best-effort HTML → Markdown conversion for Blogger post content. Handles
 the common tags Blogger emits: headings, paragraphs, bold/italic, links,

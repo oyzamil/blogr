@@ -31,14 +31,20 @@
 				}`,
 			);
 			const gallery = el("img-gallery");
+
 			gallery.innerHTML = images.length
 				? images
-						.map(
-							(img) => `
-					<div class="post-card" data-url="${escapeHtml(img.url)}" data-post-url="${escapeHtml(img.postUrl)}" style="cursor:pointer" title="From: ${escapeHtml(img.postUrl)} — click to load in the resizeImage() playground below">
-						<div class="post-card__thumb"><img data-src="${escapeHtml(img.url)}" alt=""></div>
-					</div>`,
-						)
+						.map((img) => {
+							const finalThumb = BlogrPlugins.resizeImage(escapeHtml(img.url), {
+								width: 155,
+								height: 100,
+								format: "webp",
+							});
+							return `
+					<div class="post-card" data-url="${escapeHtml(img.url)}" data-post-url="${escapeHtml(img.postUrl)}" style="cursor:pointer" title="From: ${escapeHtml(img.title)} — click to load in the resizeImage() playground below">
+						<div class="post-card__thumb"><img data-src="${finalThumb}" alt=""></div>
+					</div>`;
+						})
 						.join("")
 				: emptyBox("No images found — try scanning without a sample size cap.");
 			if (window.BlogrPlugins)

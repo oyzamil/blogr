@@ -6,7 +6,7 @@
 
 # Class: PostsModule
 
-Defined in: [src/modules/posts.ts:22](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L22)
+Defined in: [src/modules/posts.ts:22](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L22)
 
 Methods for listing, fetching and searching blog posts.
 
@@ -16,7 +16,7 @@ Methods for listing, fetching and searching blog posts.
 
 > **new PostsModule**(`client`): `PostsModule`
 
-Defined in: [src/modules/posts.ts:23](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L23)
+Defined in: [src/modules/posts.ts:23](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L23)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/posts.ts:23](https://github.com/oyzamil/blogr/blob/51d1
 
 > **featured**(`requestOptions?`): `Promise`\<[`Post`](../interfaces/Post.md) \| `null`\>
 
-Defined in: [src/modules/posts.ts:85](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L85)
+Defined in: [src/modules/posts.ts:85](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L85)
 
 Best-effort "featured" post — Blogger's public feed API has no explicit
 flag for a pinned/featured post, so this returns the first post in the
@@ -57,7 +57,7 @@ is set.
 
 > **get**(`postId`, `options?`, `requestOptions?`): `Promise`\<[`Post`](../interfaces/Post.md) \| `null`\>
 
-Defined in: [src/modules/posts.ts:39](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L39)
+Defined in: [src/modules/posts.ts:39](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L39)
 
 Fetches a single post by id, or `null` if it doesn't exist.
 
@@ -87,7 +87,7 @@ Fetches a single post by id, or `null` if it doesn't exist.
 
 > **latest**(`options?`, `requestOptions?`): `Promise`\<[`Post`](../interfaces/Post.md)[]\>
 
-Defined in: [src/modules/posts.ts:67](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L67)
+Defined in: [src/modules/posts.ts:67](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L67)
 
 Returns the most recent posts (default 5), newest first. Pass a bare
 `number` for just a limit, or an options object to also filter by
@@ -113,7 +113,7 @@ Returns the most recent posts (default 5), newest first. Pass a bare
 
 > **list**(`options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/posts.ts:26](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L26)
+Defined in: [src/modules/posts.ts:26](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L26)
 
 Lists posts, optionally filtered/paginated/sorted.
 
@@ -137,7 +137,7 @@ Lists posts, optionally filtered/paginated/sorted.
 
 > **query**(`query`, `options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/posts.ts:53](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L53)
+Defined in: [src/modules/posts.ts:53](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L53)
 
 Full-text search across posts (equivalent to `search()` scoped to posts).
 
@@ -165,7 +165,7 @@ Full-text search across posts (equivalent to `search()` scoped to posts).
 
 > **random**(`options?`, `requestOptions?`): `Promise`\<[`Post`](../interfaces/Post.md)[]\>
 
-Defined in: [src/modules/posts.ts:95](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/posts.ts#L95)
+Defined in: [src/modules/posts.ts:95](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/posts.ts#L95)
 
 Returns random post(s) (default 1) by sampling random indexes. Pass a
 bare `number` for just a count, or an options object to also filter by

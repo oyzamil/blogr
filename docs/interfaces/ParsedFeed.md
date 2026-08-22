@@ -6,7 +6,7 @@
 
 # Interface: ParsedFeed
 
-Defined in: [src/types/feed.ts:137](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L137)
+Defined in: [src/types/feed.ts:137](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L137)
 
 The parsed shape of any Blogger feed response (posts, pages or comments).
 
@@ -16,7 +16,7 @@ The parsed shape of any Blogger feed response (posts, pages or comments).
 
 > **blog**: [`BlogInfo`](BlogInfo.md) \| `null`
 
-Defined in: [src/types/feed.ts:138](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L138)
+Defined in: [src/types/feed.ts:138](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L138)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types/feed.ts:138](https://github.com/oyzamil/blogr/blob/51d114
 
 > **comments**: [`Comment`](Comment.md)[] \| `null`
 
-Defined in: [src/types/feed.ts:140](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L140)
+Defined in: [src/types/feed.ts:140](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L140)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types/feed.ts:140](https://github.com/oyzamil/blogr/blob/51d114
 
 > **itemsPerPage**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:141](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L141)
+Defined in: [src/types/feed.ts:141](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L141)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types/feed.ts:141](https://github.com/oyzamil/blogr/blob/51d114
 
 > **links**: [`Link`](Link.md)[]
 
-Defined in: [src/types/feed.ts:147](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L147)
+Defined in: [src/types/feed.ts:147](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L147)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/types/feed.ts:147](https://github.com/oyzamil/blogr/blob/51d114
 
 > **nextUrl**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:146](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L146)
+Defined in: [src/types/feed.ts:146](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L146)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/types/feed.ts:146](https://github.com/oyzamil/blogr/blob/51d114
 
 > **posts**: [`Post`](Post.md)[] \| `null`
 
-Defined in: [src/types/feed.ts:139](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L139)
+Defined in: [src/types/feed.ts:139](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L139)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/types/feed.ts:139](https://github.com/oyzamil/blogr/blob/51d114
 
 > **previousUrl**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:145](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L145)
+Defined in: [src/types/feed.ts:145](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L145)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [src/types/feed.ts:145](https://github.com/oyzamil/blogr/blob/51d114
 
 > **selfUrl**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:144](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L144)
+Defined in: [src/types/feed.ts:144](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L144)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [src/types/feed.ts:144](https://github.com/oyzamil/blogr/blob/51d114
 
 > **startIndex**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:142](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L142)
+Defined in: [src/types/feed.ts:142](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L142)
 
 ***
 
@@ -88,4 +88,4 @@ Defined in: [src/types/feed.ts:142](https://github.com/oyzamil/blogr/blob/51d114
 
 > **totalResults**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:143](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L143)
+Defined in: [src/types/feed.ts:143](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L143)

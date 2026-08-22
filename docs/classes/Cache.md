@@ -6,7 +6,7 @@
 
 # Class: Cache
 
-Defined in: [src/core/cache.ts:10](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L10)
+Defined in: [src/core/cache.ts:10](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L10)
 
 A tiny in-memory cache keyed by request URL. Disabled by default —
 call [Cache.enable](#enable) to turn it on.
@@ -29,7 +29,7 @@ call [Cache.enable](#enable) to turn it on.
 
 > **get** **isEnabled**(): `boolean`
 
-Defined in: [src/core/cache.ts:43](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L43)
+Defined in: [src/core/cache.ts:43](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L43)
 
 ##### Returns
 
@@ -43,7 +43,7 @@ Defined in: [src/core/cache.ts:43](https://github.com/oyzamil/blogr/blob/51d1141
 
 > **get** **size**(): `number`
 
-Defined in: [src/core/cache.ts:37](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L37)
+Defined in: [src/core/cache.ts:37](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L37)
 
 ##### Returns
 
@@ -55,7 +55,7 @@ Defined in: [src/core/cache.ts:37](https://github.com/oyzamil/blogr/blob/51d1141
 
 > **clear**(): `this`
 
-Defined in: [src/core/cache.ts:29](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L29)
+Defined in: [src/core/cache.ts:29](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L29)
 
 Clears every cached entry.
 
@@ -69,7 +69,7 @@ Clears every cached entry.
 
 > **delete**(`key`): `boolean`
 
-Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L34)
+Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L34)
 
 #### Parameters
 
@@ -87,7 +87,7 @@ Defined in: [src/core/cache.ts:34](https://github.com/oyzamil/blogr/blob/51d1141
 
 > **disable**(): `this`
 
-Defined in: [src/core/cache.ts:23](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L23)
+Defined in: [src/core/cache.ts:23](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L23)
 
 Disables caching (existing entries are kept, but bypassed until re-enabled).
 
@@ -101,7 +101,7 @@ Disables caching (existing entries are kept, but bypassed until re-enabled).
 
 > **enable**(`options?`): `this`
 
-Defined in: [src/core/cache.ts:16](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L16)
+Defined in: [src/core/cache.ts:16](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L16)
 
 Enables caching. Optionally pass a TTL in milliseconds.
 
@@ -123,7 +123,7 @@ Enables caching. Optionally pass a TTL in milliseconds.
 
 > **get**\<`T`\>(`key`): `T` \| `undefined`
 
-Defined in: [src/core/cache.ts:47](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L47)
+Defined in: [src/core/cache.ts:47](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L47)
 
 #### Type Parameters
 
@@ -147,7 +147,7 @@ Defined in: [src/core/cache.ts:47](https://github.com/oyzamil/blogr/blob/51d1141
 
 > **has**(`key`): `boolean`
 
-Defined in: [src/core/cache.ts:40](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L40)
+Defined in: [src/core/cache.ts:40](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L40)
 
 #### Parameters
 
@@ -165,7 +165,7 @@ Defined in: [src/core/cache.ts:40](https://github.com/oyzamil/blogr/blob/51d1141
 
 > **set**\<`T`\>(`key`, `value`): `void`
 
-Defined in: [src/core/cache.ts:58](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/cache.ts#L58)
+Defined in: [src/core/cache.ts:58](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/cache.ts#L58)
 
 #### Type Parameters
 

@@ -65,36 +65,28 @@ CDN (browser, IIFE global `Blogr`):
 ```html
 <script src="https://cdn.jsdelivr.net/npm/blogr/dist/blogr.min.js"></script>
 <script>
-  const blog = new Blogr("https://example.blogspot.com");
-  blog.latest(5).then(posts => console.log(posts));
+(async () => {
+  const blog = await Blogr.connect("https://example.blogspot.com");
+  const info = await blog.info();
+  console.log(info.title, info.subtitle);
+})();
 </script>
 ```
 
-> **Fixed as of this build:** `blogr.js`/`blogr.min.js` now ship the exact same `Blogr` wrapper class as `blogr.esm.js`/`blogr.cjs` — one call style everywhere, npm or CDN. `new Blogr(url)` off the CDN global gets `.info()`, `.posts()`, `.stats()`, `.label()`, `.search()`, `.use()`, `.on()`/`.off()`, `.request()`/`.fetch()`, the html helpers, and the static factories `Blogr.connect()` / `.fromBlogId()` / `.fromUrl()` / `.fromFeed()` — identical to npm. Confirmed by rebuilding and sandbox-testing the bundle directly.
->
-> Older `blogr.js` builds (pre-fix) shipped a bare internal `Client` instead, with a different module-getter call style (`blog.posts.list()` instead of `blog.posts()`) and missing `use()`/`request()`/`fetch()`/html helpers entirely. If you're on an older cached CDN file, re-pull `blogr.min.js` to get the fix.
->
-> One thing that stays iife-only either way: top-level `await` isn't allowed in a plain `<script>` tag, so wrap usage in an async IIFE:
->
-> ```html
-> <script src="https://cdn.jsdelivr.net/npm/blogr/dist/blogr.min.js"></script>
-> <script>
-> (async () => {
->   const blog = await Blogr.connect("https://example.blogspot.com");
->   const info = await blog.info();
->   console.log(info.title, info.subtitle);
-> })();
-> </script>
-> ```
-
 ## Formats shipped in dist
 
-Per module (e.g. `blogr`, `posts`, `comments`...), four builds:
+Per module (e.g. `blogr`, `posts`, `comments`, `authors`), four builds:
 
 - `<name>.js` / `<name>.min.js` — ESM (also `.esm.js` / `.esm.min.js` variants)
 - `<name>.cjs` / `<name>.min.cjs` — CommonJS
 - `blogr.js` (iife, unminified) / `blogr.min.js` (iife, minified) — browser global `Blogr`
 - `.d.ts` / `.d.cts` — type decls for ESM / CJS resp.
+
+> when using modules, you need to include client.js or client.min.js before module. like:
+>````html
+><script src="https://cdn.jsdelivr.net/npm/blogr/dist/client.min.js"></script>
+><script src="https://cdn.jsdelivr.net/npm/blogr/dist/posts.min.js"></script>
+>````
 
 Modular imports (tree-shake unused modules — importing `blogr/posts` alone only pulls in `PostsModule`, importing `blogr` pulls in everything):
 

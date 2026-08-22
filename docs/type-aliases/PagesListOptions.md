@@ -8,6 +8,6 @@
 
 > **PagesListOptions** = [`BaseListOptions`](../interfaces/BaseListOptions.md)
 
-Defined in: [src/types/options.ts:72](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/options.ts#L72)
+Defined in: [src/types/options.ts:72](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L72)
 
 Options for [PagesModule.list](../classes/PagesModule.md#list).

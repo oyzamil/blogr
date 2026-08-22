@@ -8,4 +8,4 @@
 
 > **FeedFormat** = `"json"` \| `"atom"` \| `"rss"` \| `"jsonp"`
 
-Defined in: [src/core/http.ts:5](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/http.ts#L5)
+Defined in: [src/core/http.ts:5](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L5)

@@ -6,7 +6,7 @@
 
 # Interface: Author
 
-Defined in: [src/types/feed.ts:2](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L2)
+Defined in: [src/types/feed.ts:2](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L2)
 
 An author of a post, page, comment or the blog itself.
 
@@ -21,7 +21,7 @@ An author of a post, page, comment or the blog itself.
 
 > **email**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:18](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L18)
+Defined in: [src/types/feed.ts:18](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L18)
 
 Email on file, or `null`. Blogger's public feed almost always masks
 this as `noreply@blogger.com` for privacy — rarely a real address.
@@ -32,7 +32,7 @@ this as `noreply@blogger.com` for privacy — rarely a real address.
 
 > **id**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:13](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L13)
+Defined in: [src/types/feed.ts:13](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L13)
 
 Numeric Blogger profile id, parsed out of `url` (e.g. the trailing
 digits of `.../profile/12345678901234567890`), or `null` if `url`
@@ -45,7 +45,7 @@ isn't a recognizable profile link. More stable than matching on
 
 > **image**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:20](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L20)
+Defined in: [src/types/feed.ts:20](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L20)
 
 Avatar/profile image URL of the author, or `null` if unavailable.
 
@@ -55,7 +55,7 @@ Avatar/profile image URL of the author, or `null` if unavailable.
 
 > **imageHeight**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:24](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L24)
+Defined in: [src/types/feed.ts:24](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L24)
 
 Avatar height in px, if the feed reported one, else `null`.
 
@@ -65,7 +65,7 @@ Avatar height in px, if the feed reported one, else `null`.
 
 > **imageWidth**: `number` \| `null`
 
-Defined in: [src/types/feed.ts:22](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L22)
+Defined in: [src/types/feed.ts:22](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L22)
 
 Avatar width in px, if the feed reported one, else `null`.
 
@@ -75,7 +75,7 @@ Avatar width in px, if the feed reported one, else `null`.
 
 > **name**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:4](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L4)
+Defined in: [src/types/feed.ts:4](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L4)
 
 Display name of the author, or `null` if unavailable.
 
@@ -85,6 +85,6 @@ Display name of the author, or `null` if unavailable.
 
 > **url**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:6](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/types/feed.ts#L6)
+Defined in: [src/types/feed.ts:6](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L6)
 
 Profile URL of the author, or `null` if unavailable.

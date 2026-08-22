@@ -6,7 +6,7 @@
 
 # Interface: BlogStats
 
-Defined in: [src/modules/stats.ts:4](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L4)
+Defined in: [src/modules/stats.ts:4](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L4)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/modules/stats.ts:4](https://github.com/oyzamil/blogr/blob/51d11
 
 > **comments**: `number`
 
-Defined in: [src/modules/stats.ts:7](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L7)
+Defined in: [src/modules/stats.ts:7](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L7)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/modules/stats.ts:7](https://github.com/oyzamil/blogr/blob/51d11
 
 > **labels**: `number`
 
-Defined in: [src/modules/stats.ts:8](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L8)
+Defined in: [src/modules/stats.ts:8](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L8)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/modules/stats.ts:8](https://github.com/oyzamil/blogr/blob/51d11
 
 > **lastPostDate**: `string` \| `null`
 
-Defined in: [src/modules/stats.ts:10](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L10)
+Defined in: [src/modules/stats.ts:10](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L10)
 
 Published timestamp of the most recent post, or `null` if the blog has no posts.
 
@@ -40,7 +40,7 @@ Published timestamp of the most recent post, or `null` if the blog has no posts.
 
 > **pages**: `number`
 
-Defined in: [src/modules/stats.ts:6](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L6)
+Defined in: [src/modules/stats.ts:6](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L6)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: [src/modules/stats.ts:6](https://github.com/oyzamil/blogr/blob/51d11
 
 > **posts**: `number`
 
-Defined in: [src/modules/stats.ts:5](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/modules/stats.ts#L5)
+Defined in: [src/modules/stats.ts:5](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/stats.ts#L5)

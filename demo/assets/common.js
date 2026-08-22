@@ -264,9 +264,14 @@ function emptyBox(text) {
 
 function postCardInnerHtml(post) {
 	const thumb = post.thumbnail || post.thumbnailAlt;
+	const finalThumb = BlogrPlugins.resizeImage(escapeHtml(thumb), {
+		width: 275,
+		height: 170,
+		format: "webp",
+	});
 	return `
 		<div class="post-card__thumb">
-			${thumb ? `<img data-src="${escapeHtml(thumb)}" alt="">` : ""}
+			${thumb ? `<img data-src="${finalThumb}" alt="">` : ""}
 		</div>
 		<div class="post-card__body">
 			<div class="post-card__meta">${fmtDate(post.published)} · ${escapeHtml(post.author?.name || "—")}</div>

@@ -6,7 +6,7 @@
 
 # Interface: BloggerEventMap
 
-Defined in: [src/core/events.ts:2](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/events.ts#L2)
+Defined in: [src/core/events.ts:2](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/events.ts#L2)
 
 Payloads for each event emitted by a [Blogr](../classes/Blogr.md) instance.
 
@@ -16,7 +16,7 @@ Payloads for each event emitted by a [Blogr](../classes/Blogr.md) instance.
 
 > **error**: `object`
 
-Defined in: [src/core/events.ts:8](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/events.ts#L8)
+Defined in: [src/core/events.ts:8](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/events.ts#L8)
 
 Fired when a request or parsing step fails.
 
@@ -34,7 +34,7 @@ Fired when a request or parsing step fails.
 
 > **request**: `object`
 
-Defined in: [src/core/events.ts:4](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/events.ts#L4)
+Defined in: [src/core/events.ts:4](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/events.ts#L4)
 
 Fired right before a network request is made.
 
@@ -52,7 +52,7 @@ Fired right before a network request is made.
 
 > **response**: `object`
 
-Defined in: [src/core/events.ts:6](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/events.ts#L6)
+Defined in: [src/core/events.ts:6](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/events.ts#L6)
 
 Fired after a network request completes successfully.
 

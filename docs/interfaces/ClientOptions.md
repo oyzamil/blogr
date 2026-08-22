@@ -6,7 +6,7 @@
 
 # Interface: ClientOptions
 
-Defined in: [src/core/client.ts:48](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/client.ts#L48)
+Defined in: [src/core/client.ts:48](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/client.ts#L48)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/core/client.ts:48](https://github.com/oyzamil/blogr/blob/51d114
 
 > `optional` **jsonp?**: `boolean`
 
-Defined in: [src/core/client.ts:50](https://github.com/oyzamil/blogr/blob/51d1141d08b95ec7ef169378db9a9d42fca0048a/src/core/client.ts#L50)
+Defined in: [src/core/client.ts:50](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/client.ts#L50)
 
 Enable JSONP transport (browser-only).
 
