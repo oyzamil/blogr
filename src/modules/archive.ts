@@ -76,14 +76,7 @@ export class ArchiveModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link ArchiveModule} for this client. */
-		readonly archive: ArchiveModule;
-	}
-}
-
-registerClientModule<ArchiveModule>(
+registerClientModule(
 	"archive",
 	(client) => new ArchiveModule(new PostsModule(client)),
 );

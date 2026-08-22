@@ -74,11 +74,4 @@ export class UrlModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link UrlModule} for this client. */
-		readonly url: UrlModule;
-	}
-}
-
-registerClientModule<UrlModule>("url", (client) => new UrlModule(client));
+registerClientModule("url", (client) => new UrlModule(client));

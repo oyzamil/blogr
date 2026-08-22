@@ -64,11 +64,4 @@ export class FeedModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link FeedModule} for this client. */
-		readonly feed: FeedModule;
-	}
-}
-
-registerClientModule<FeedModule>("feed", (client) => new FeedModule(client));
+registerClientModule("feed", (client) => new FeedModule(client));

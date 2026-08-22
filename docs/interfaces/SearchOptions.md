@@ -6,7 +6,7 @@
 
 # Interface: SearchOptions
 
-Defined in: [src/types/options.ts:81](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L81)
+Defined in: [src/types/options.ts:81](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L81)
 
 Options for [SearchModule](../classes/SearchModule.md).
 
@@ -20,7 +20,7 @@ Options for [SearchModule](../classes/SearchModule.md).
 
 > `optional` **label?**: `string` \| `string`[]
 
-Defined in: [src/types/options.ts:83](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L83)
+Defined in: [src/types/options.ts:83](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L83)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/types/options.ts:83](https://github.com/oyzamil/blogr/blob/26e3
 
 > `optional` **limit?**: `number` \| `null`
 
-Defined in: [src/types/options.ts:22](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L22)
+Defined in: [src/types/options.ts:22](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L22)
 
 Alias for Blogger's `max-results`.
 
@@ -48,7 +48,7 @@ then applies its own default page size).
 
 > `optional` **orderBy?**: `"updated"` \| `"published"`
 
-Defined in: [src/types/options.ts:26](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L26)
+Defined in: [src/types/options.ts:26](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L26)
 
 Sort field.
 
@@ -62,7 +62,7 @@ Sort field.
 
 > `optional` **page?**: `number`
 
-Defined in: [src/types/options.ts:16](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L16)
+Defined in: [src/types/options.ts:16](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L16)
 
 Page number (1-based). Converted internally to `startIndex` using
 `limit`. Ignored if `startIndex` is also provided.
@@ -77,7 +77,7 @@ Page number (1-based). Converted internally to `startIndex` using
 
 > `optional` **publishedMax?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:30](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L30)
+Defined in: [src/types/options.ts:30](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L30)
 
 Only include entries published on/before this date.
 
@@ -91,7 +91,7 @@ Only include entries published on/before this date.
 
 > `optional` **publishedMin?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:28](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L28)
+Defined in: [src/types/options.ts:28](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L28)
 
 Only include entries published on/after this date.
 
@@ -105,7 +105,7 @@ Only include entries published on/after this date.
 
 > **query**: `string`
 
-Defined in: [src/types/options.ts:82](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L82)
+Defined in: [src/types/options.ts:82](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L82)
 
 ***
 
@@ -113,7 +113,7 @@ Defined in: [src/types/options.ts:82](https://github.com/oyzamil/blogr/blob/26e3
 
 > `optional` **startIndex?**: `number`
 
-Defined in: [src/types/options.ts:24](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L24)
+Defined in: [src/types/options.ts:24](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L24)
 
 Raw 1-based start index, takes precedence over `page`.
 
@@ -127,7 +127,7 @@ Raw 1-based start index, takes precedence over `page`.
 
 > `optional` **summary?**: `boolean`
 
-Defined in: [src/types/options.ts:36](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L36)
+Defined in: [src/types/options.ts:36](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L36)
 
 When `true`, requests the lightweight "summary" projection.
 
@@ -141,7 +141,7 @@ When `true`, requests the lightweight "summary" projection.
 
 > `optional` **updatedMax?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:34](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L34)
+Defined in: [src/types/options.ts:34](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L34)
 
 Only include entries updated on/before this date.
 
@@ -155,7 +155,7 @@ Only include entries updated on/before this date.
 
 > `optional` **updatedMin?**: `string` \| `Date`
 
-Defined in: [src/types/options.ts:32](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L32)
+Defined in: [src/types/options.ts:32](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L32)
 
 Only include entries updated on/after this date.
 

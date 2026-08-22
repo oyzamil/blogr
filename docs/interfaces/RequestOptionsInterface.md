@@ -6,7 +6,7 @@
 
 # Interface: RequestOptionsInterface
 
-Defined in: [src/types/options.ts:5](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L5)
+Defined in: [src/types/options.ts:5](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L5)
 
 Common request-level controls, available on every method.
 
@@ -16,6 +16,6 @@ Common request-level controls, available on every method.
 
 > `optional` **signal?**: `AbortSignal`
 
-Defined in: [src/types/options.ts:7](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/options.ts#L7)
+Defined in: [src/types/options.ts:7](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/options.ts#L7)
 
 Abort the underlying `fetch` call.

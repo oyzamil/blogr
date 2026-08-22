@@ -6,7 +6,7 @@
 
 # Interface: Post
 
-Defined in: [src/types/feed.ts:84](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L84)
+Defined in: [src/types/feed.ts:84](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L84)
 
 A Blogger post or page entry.
 
@@ -16,7 +16,7 @@ A Blogger post or page entry.
 
 > **author**: [`Author`](Author.md)
 
-Defined in: [src/types/feed.ts:98](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L98)
+Defined in: [src/types/feed.ts:98](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L98)
 
 Entry author.
 
@@ -26,7 +26,7 @@ Entry author.
 
 > **comments**: [`PostCommentInfo`](PostCommentInfo.md)
 
-Defined in: [src/types/feed.ts:108](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L108)
+Defined in: [src/types/feed.ts:108](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L108)
 
 Comment count/metadata for this entry.
 
@@ -36,7 +36,7 @@ Comment count/metadata for this entry.
 
 > **content**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:100](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L100)
+Defined in: [src/types/feed.ts:100](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L100)
 
 Full HTML content, or `null` when only a summary was requested.
 
@@ -46,7 +46,7 @@ Full HTML content, or `null` when only a summary was requested.
 
 > **geo**: [`Geo`](Geo.md)
 
-Defined in: [src/types/feed.ts:110](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L110)
+Defined in: [src/types/feed.ts:110](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L110)
 
 Geo-location, if attached.
 
@@ -56,7 +56,7 @@ Geo-location, if attached.
 
 > **id**: `string`
 
-Defined in: [src/types/feed.ts:86](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L86)
+Defined in: [src/types/feed.ts:86](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L86)
 
 Entry id (numeric string).
 
@@ -66,7 +66,7 @@ Entry id (numeric string).
 
 > **labels**: `string`[]
 
-Defined in: [src/types/feed.ts:96](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L96)
+Defined in: [src/types/feed.ts:96](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L96)
 
 Labels attached to the entry.
 
@@ -76,7 +76,7 @@ Labels attached to the entry.
 
 > **links**: [`Link`](Link.md)[]
 
-Defined in: [src/types/feed.ts:112](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L112)
+Defined in: [src/types/feed.ts:112](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L112)
 
 Raw `<link>` entries from the feed.
 
@@ -86,7 +86,7 @@ Raw `<link>` entries from the feed.
 
 > **published**: `string`
 
-Defined in: [src/types/feed.ts:92](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L92)
+Defined in: [src/types/feed.ts:92](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L92)
 
 ISO published timestamp.
 
@@ -96,7 +96,7 @@ ISO published timestamp.
 
 > **summary**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:102](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L102)
+Defined in: [src/types/feed.ts:102](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L102)
 
 Plain-text/HTML summary/snippet, or `null`.
 
@@ -106,7 +106,7 @@ Plain-text/HTML summary/snippet, or `null`.
 
 > **thumbnail**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:104](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L104)
+Defined in: [src/types/feed.ts:104](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L104)
 
 Best-guess thumbnail extracted from content, or `null`.
 
@@ -116,7 +116,7 @@ Best-guess thumbnail extracted from content, or `null`.
 
 > **thumbnailAlt**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:106](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L106)
+Defined in: [src/types/feed.ts:106](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L106)
 
 Thumbnail explicitly selected by Blogger, or `null`.
 
@@ -126,7 +126,7 @@ Thumbnail explicitly selected by Blogger, or `null`.
 
 > **title**: `string`
 
-Defined in: [src/types/feed.ts:88](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L88)
+Defined in: [src/types/feed.ts:88](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L88)
 
 Title of the entry.
 
@@ -136,7 +136,7 @@ Title of the entry.
 
 > **updated**: `string`
 
-Defined in: [src/types/feed.ts:94](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L94)
+Defined in: [src/types/feed.ts:94](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L94)
 
 ISO last-updated timestamp.
 
@@ -146,6 +146,6 @@ ISO last-updated timestamp.
 
 > **url**: `string`
 
-Defined in: [src/types/feed.ts:90](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L90)
+Defined in: [src/types/feed.ts:90](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L90)
 
 Canonical URL of the entry.

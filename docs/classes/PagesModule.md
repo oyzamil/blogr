@@ -6,7 +6,7 @@
 
 # Class: PagesModule
 
-Defined in: [src/modules/pages.ts:13](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/pages.ts#L13)
+Defined in: [src/modules/pages.ts:13](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/pages.ts#L13)
 
 Methods for listing and fetching static blog pages.
 
@@ -16,7 +16,7 @@ Methods for listing and fetching static blog pages.
 
 > **new PagesModule**(`client`): `PagesModule`
 
-Defined in: [src/modules/pages.ts:14](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/pages.ts#L14)
+Defined in: [src/modules/pages.ts:14](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/pages.ts#L14)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/pages.ts:14](https://github.com/oyzamil/blogr/blob/26e3
 
 > **get**(`pageId`, `options?`, `requestOptions?`): `Promise`\<[`Post`](../interfaces/Post.md) \| `null`\>
 
-Defined in: [src/modules/pages.ts:32](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/pages.ts#L32)
+Defined in: [src/modules/pages.ts:32](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/pages.ts#L32)
 
 Fetches a single page by id, or `null` if it doesn't exist.
 
@@ -64,7 +64,7 @@ Fetches a single page by id, or `null` if it doesn't exist.
 
 > **list**(`options?`, `requestOptions?`): `Promise`\<[`Pager`](../interfaces/Pager.md)\<[`Post`](../interfaces/Post.md)\>\>
 
-Defined in: [src/modules/pages.ts:17](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/pages.ts#L17)
+Defined in: [src/modules/pages.ts:17](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/pages.ts#L17)
 
 Lists the blog's static pages.
 

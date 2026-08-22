@@ -42,11 +42,4 @@ export class StatsModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link StatsModule} for this client. */
-		readonly stats: StatsModule;
-	}
-}
-
-registerClientModule<StatsModule>("stats", (client) => new StatsModule(client));
+registerClientModule("stats", (client) => new StatsModule(client));

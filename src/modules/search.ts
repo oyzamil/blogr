@@ -38,14 +38,7 @@ export class SearchModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link SearchModule} for this client. */
-		readonly search: SearchModule;
-	}
-}
-
-registerClientModule<SearchModule>(
+registerClientModule(
 	"search",
 	(client) => new SearchModule(new PostsModule(client)),
 );

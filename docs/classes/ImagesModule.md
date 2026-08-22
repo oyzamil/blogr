@@ -6,7 +6,7 @@
 
 # Class: ImagesModule
 
-Defined in: [src/modules/images.ts:17](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/images.ts#L17)
+Defined in: [src/modules/images.ts:17](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/images.ts#L17)
 
 Aggregate image discovery across posts.
 
@@ -16,7 +16,7 @@ Aggregate image discovery across posts.
 
 > **new ImagesModule**(`posts`): `ImagesModule`
 
-Defined in: [src/modules/images.ts:18](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/images.ts#L18)
+Defined in: [src/modules/images.ts:18](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/images.ts#L18)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/modules/images.ts:18](https://github.com/oyzamil/blogr/blob/26e
 
 > **list**(`options?`, `requestOptions?`): `Promise`\<[`FoundImage`](../interfaces/FoundImage.md)[]\>
 
-Defined in: [src/modules/images.ts:29](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/modules/images.ts#L29)
+Defined in: [src/modules/images.ts:29](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/modules/images.ts#L29)
 
 Returns every unique image found in post content, each tagged with
 the post it came from.

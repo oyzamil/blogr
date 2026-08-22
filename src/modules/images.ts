@@ -58,14 +58,7 @@ export class ImagesModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link ImagesModule} for this client. */
-		readonly images: ImagesModule;
-	}
-}
-
-registerClientModule<ImagesModule>(
+registerClientModule(
 	"images",
 	(client) => new ImagesModule(new PostsModule(client)),
 );

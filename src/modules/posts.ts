@@ -123,11 +123,4 @@ export class PostsModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link PostsModule} for this client. */
-		readonly posts: PostsModule;
-	}
-}
-
-registerClientModule<PostsModule>("posts", (client) => new PostsModule(client));
+registerClientModule("posts", (client) => new PostsModule(client));

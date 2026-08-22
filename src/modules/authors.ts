@@ -103,14 +103,7 @@ export class AuthorsModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link AuthorsModule} for this client. */
-		readonly authors: AuthorsModule;
-	}
-}
-
-registerClientModule<AuthorsModule>(
+registerClientModule(
 	"authors",
 	(client) => new AuthorsModule(new PostsModule(client)),
 );

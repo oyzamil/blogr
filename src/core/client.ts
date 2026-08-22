@@ -11,6 +11,7 @@ import {
 	fetchText,
 	type QueryOptions,
 } from "./http";
+import { type ClientModules } from "./modules";
 import { isString, trailingSlash } from "./utils";
 
 const MODULE_CACHE = Symbol("blogr.modules");
@@ -26,21 +27,24 @@ const MODULE_CACHE = Symbol("blogr.modules");
  * Pair with a `declare module "./client"` interface merge in the calling
  * file so the new property is actually typed, not just present at runtime.
  */
-export function registerClientModule<T>(
-	name: string,
-	factory: (client: Client) => T,
+export function registerClientModule<K extends keyof ClientModules>(
+	name: K,
+	factory: (client: Client) => ClientModules[K],
 ): void {
 	Object.defineProperty(Client.prototype, name, {
 		configurable: true,
 		enumerable: true,
-		get(this: Client): T {
+
+		get(this: Client): ClientModules[K] {
 			// biome-ignore lint/suspicious/noAssignInExpressions: Expected
 			const cache = ((
-				this as unknown as Record<symbol, Record<string, unknown>>
+				this as unknown as {
+					[MODULE_CACHE]?: Partial<ClientModules>;
+				}
 			)[MODULE_CACHE] ??= {});
 
 			// biome-ignore lint/suspicious/noAssignInExpressions: Expected
-			return (cache[name] ??= factory(this)) as T;
+			return (cache[name] ??= factory(this));
 		},
 	});
 }

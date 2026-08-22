@@ -136,14 +136,4 @@ export class CommentsModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link CommentsModule} for this client. */
-		readonly comments: CommentsModule;
-	}
-}
-
-registerClientModule<CommentsModule>(
-	"comments",
-	(client) => new CommentsModule(client),
-);
+registerClientModule("comments", (client) => new CommentsModule(client));

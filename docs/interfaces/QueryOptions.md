@@ -6,7 +6,7 @@
 
 # Interface: QueryOptions
 
-Defined in: [src/core/http.ts:8](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L8)
+Defined in: [src/core/http.ts:8](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L8)
 
 Friendly query options accepted by [buildUrl](../type-aliases/buildUrl.md).
 
@@ -16,7 +16,7 @@ Friendly query options accepted by [buildUrl](../type-aliases/buildUrl.md).
 
 > `optional` **limit?**: `number`
 
-Defined in: [src/core/http.ts:9](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L9)
+Defined in: [src/core/http.ts:9](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L9)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/core/http.ts:9](https://github.com/oyzamil/blogr/blob/26e336356
 
 > `optional` **orderBy?**: `string`
 
-Defined in: [src/core/http.ts:11](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L11)
+Defined in: [src/core/http.ts:11](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L11)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/core/http.ts:11](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **publishedMax?**: `string` \| `Date`
 
-Defined in: [src/core/http.ts:13](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L13)
+Defined in: [src/core/http.ts:13](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L13)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/core/http.ts:13](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **publishedMin?**: `string` \| `Date`
 
-Defined in: [src/core/http.ts:12](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L12)
+Defined in: [src/core/http.ts:12](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L12)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/core/http.ts:12](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **query?**: `string`
 
-Defined in: [src/core/http.ts:16](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L16)
+Defined in: [src/core/http.ts:16](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L16)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/core/http.ts:16](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **startIndex?**: `number`
 
-Defined in: [src/core/http.ts:10](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L10)
+Defined in: [src/core/http.ts:10](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L10)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/core/http.ts:10](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **updatedMax?**: `string` \| `Date`
 
-Defined in: [src/core/http.ts:15](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L15)
+Defined in: [src/core/http.ts:15](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L15)
 
 ***
 
@@ -72,4 +72,4 @@ Defined in: [src/core/http.ts:15](https://github.com/oyzamil/blogr/blob/26e33635
 
 > `optional` **updatedMin?**: `string` \| `Date`
 
-Defined in: [src/core/http.ts:14](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/core/http.ts#L14)
+Defined in: [src/core/http.ts:14](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/core/http.ts#L14)

@@ -43,11 +43,4 @@ export class PagesModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link PagesModule} for this client. */
-		readonly pages: PagesModule;
-	}
-}
-
-registerClientModule<PagesModule>("pages", (client) => new PagesModule(client));
+registerClientModule("pages", (client) => new PagesModule(client));

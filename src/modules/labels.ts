@@ -81,14 +81,7 @@ export class LabelsModule {
 	}
 }
 
-declare module "../core/client" {
-	interface Client {
-		/** Lazily-created {@link LabelsModule} for this client. */
-		readonly labels: LabelsModule;
-	}
-}
-
-registerClientModule<LabelsModule>(
+registerClientModule(
 	"labels",
 	(client) => new LabelsModule(client, new PostsModule(client)),
 );

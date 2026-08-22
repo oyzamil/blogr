@@ -6,7 +6,7 @@
 
 # Interface: Comment
 
-Defined in: [src/types/feed.ts:116](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L116)
+Defined in: [src/types/feed.ts:116](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L116)
 
 A comment entry.
 
@@ -16,7 +16,7 @@ A comment entry.
 
 > **author**: [`Author`](Author.md)
 
-Defined in: [src/types/feed.ts:122](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L122)
+Defined in: [src/types/feed.ts:122](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L122)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types/feed.ts:122](https://github.com/oyzamil/blogr/blob/26e336
 
 > **content**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:123](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L123)
+Defined in: [src/types/feed.ts:123](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L123)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types/feed.ts:123](https://github.com/oyzamil/blogr/blob/26e336
 
 > **extended**: [`Extended`](Extended.md)
 
-Defined in: [src/types/feed.ts:125](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L125)
+Defined in: [src/types/feed.ts:125](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L125)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types/feed.ts:125](https://github.com/oyzamil/blogr/blob/26e336
 
 > **id**: `string`
 
-Defined in: [src/types/feed.ts:117](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L117)
+Defined in: [src/types/feed.ts:117](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L117)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/types/feed.ts:117](https://github.com/oyzamil/blogr/blob/26e336
 
 > **inReplyTo**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:132](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L132)
+Defined in: [src/types/feed.ts:132](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L132)
 
 Id of the parent comment when this is a reply, else `null`.
 
@@ -58,7 +58,7 @@ Id of the parent comment when this is a reply, else `null`.
 
 > **links**: [`Link`](Link.md)[]
 
-Defined in: [src/types/feed.ts:133](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L133)
+Defined in: [src/types/feed.ts:133](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L133)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/types/feed.ts:133](https://github.com/oyzamil/blogr/blob/26e336
 
 > **post**: `object`
 
-Defined in: [src/types/feed.ts:127](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L127)
+Defined in: [src/types/feed.ts:127](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L127)
 
 The post this comment belongs to.
 
@@ -84,7 +84,7 @@ The post this comment belongs to.
 
 > **published**: `string`
 
-Defined in: [src/types/feed.ts:120](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L120)
+Defined in: [src/types/feed.ts:120](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L120)
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: [src/types/feed.ts:120](https://github.com/oyzamil/blogr/blob/26e336
 
 > **summary**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:124](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L124)
+Defined in: [src/types/feed.ts:124](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L124)
 
 ***
 
@@ -100,7 +100,7 @@ Defined in: [src/types/feed.ts:124](https://github.com/oyzamil/blogr/blob/26e336
 
 > **title**: `string`
 
-Defined in: [src/types/feed.ts:118](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L118)
+Defined in: [src/types/feed.ts:118](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L118)
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: [src/types/feed.ts:118](https://github.com/oyzamil/blogr/blob/26e336
 
 > **updated**: `string`
 
-Defined in: [src/types/feed.ts:121](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L121)
+Defined in: [src/types/feed.ts:121](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L121)
 
 ***
 
@@ -116,4 +116,4 @@ Defined in: [src/types/feed.ts:121](https://github.com/oyzamil/blogr/blob/26e336
 
 > **url**: `string`
 
-Defined in: [src/types/feed.ts:119](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L119)
+Defined in: [src/types/feed.ts:119](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L119)

@@ -6,7 +6,7 @@
 
 # Interface: Extended
 
-Defined in: [src/types/feed.ts:43](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L43)
+Defined in: [src/types/feed.ts:43](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L43)
 
 Extra info attached to a comment entry.
 
@@ -16,7 +16,7 @@ Extra info attached to a comment entry.
 
 > **class**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:45](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L45)
+Defined in: [src/types/feed.ts:45](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L45)
 
 CSS class assigned to the commenter, if any.
 
@@ -26,7 +26,7 @@ CSS class assigned to the commenter, if any.
 
 > **removed**: `boolean`
 
-Defined in: [src/types/feed.ts:49](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L49)
+Defined in: [src/types/feed.ts:49](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L49)
 
 Whether the comment has been removed/moderated.
 
@@ -36,6 +36,6 @@ Whether the comment has been removed/moderated.
 
 > **time**: `string` \| `null`
 
-Defined in: [src/types/feed.ts:47](https://github.com/oyzamil/blogr/blob/26e336356e0e8fab04e24df69bbc5904fdff9553/src/types/feed.ts#L47)
+Defined in: [src/types/feed.ts:47](https://github.com/oyzamil/blogr/blob/90b67734d29aec0c2b15d3323a9fe2e31e1ba2f6/src/types/feed.ts#L47)
 
 Human formatted publish time, if any.
